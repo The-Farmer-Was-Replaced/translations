@@ -1,0 +1,21 @@
+@plant_tooltip_template = {0}
+
+Temps de croissance de base entre {1} et {2} secondes.
+Peut pousser sur {3}.
+@object_tooltip_template_cost = 
+
+### Graine requise {{{{itemblock cost object {0}}}}}
+@object_descr_grass = Pousse automatiquement sur le gazon. Récoltez-le pour obtenir `Items.Hay`.
+@object_descr_bush = Un petit buisson qui laisse tomber `Items.Wood`.
+@object_descr_tree = Les arbres fournissent plus de bois que les buissons. Ils mettent plus de temps à pousser si d'autres arbres poussent à proximité.
+@object_descr_carrots = Des carottes !
+@object_descr_pumpkin = Les citrouilles poussent ensemble lorsqu'elles sont à côté d'autres citrouilles entièrement développées. Environ 1 citrouille sur 5 meurt en grandissant.
+Lorsque vous récoltez une citrouille, vous obtenez `Items.Pumpkin` égal au nombre de citrouilles dans la méga citrouille au cube.
+@object_descr_sunflower = Les tournesols collectent l'énergie du soleil. Les récolter vous donnera `Items.Power` égal à la racine carrée du nombre de tournesols dans la ferme.
+Si vous récoltez un tournesol qui n'a pas le nombre maximum de pétales, tous les tournesols mourront.
+@object_descr_cactus = Les cactus existent en 10 tailles différentes. Lors de la récolte, tous les cactus sur le champ seront récoltés. Seuls ceux qui sont dans l'ordre trié laisseront tomber `Items.Cactus`.
+@object_descr_hedge = Partie du labyrinthe. Faites pousser un labyrinthe en fertilisant un buisson entièrement développé.
+@object_descr_treasure = Un trésor qui contient de l'or égal à la longueur du côté du labyrinthe dans lequel il est caché. Il peut être récolté comme une plante.
+@object_descr_dinosaur = Un dinosaure majestueux. Il se déplace de manière aléatoire mais ne bougera pas pendant un certain temps après avoir été mesuré. Le récolter récolte tous les dinosaures adjacents du même type et les fait laisser tomber `Items.Bones`.
+@object_descr_turf = Le sol par défaut. L'herbe poussera automatiquement dessus.
+@object_descr_soil = Appeler `till()` transforme le sol en ceci. Appeler `till()` à nouveau le change en gazon.

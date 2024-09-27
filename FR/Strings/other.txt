@@ -1,0 +1,3 @@
+@word_number = nombre
+@word_direction = direction
+@run_cancelled = Course annulée

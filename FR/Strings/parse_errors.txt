@@ -1,0 +1,27 @@
+@error_missing_default_parameter = Un argument non par défaut ne peut pas suivre un argument par défaut.
+@error_invalid_name = {0} n'est pas un nom valide. Les noms doivent commencer par une lettre et ne peuvent contenir que des lettres, des chiffres et des underscores. Ils ne peuvent pas non plus être un mot-clé réservé.
+@error_reserved_keyword = {0} est un mot-clé réservé. Vous ne pouvez pas l'utiliser comme nom.
+@error_invalid_assign_expr = Impossible d'attribuer une valeur à cette expression.
+@error_no_statements = Un bloc de code doit contenir au moins une instruction. 
+Une instruction peut être un appel de fonction comme `harvest()` ou une affectation de variable. 
+Si vous souhaitez ne rien faire dans le bloc de code, utilisez une instruction `pass`.
+@error_not_enough_indentation = Il n'y a pas assez d'indentation ici. 
+Il doit y avoir plus d'indentation après un : qu'avant pour séparer le nouveau bloc de code. 
+Utilisez la touche Tab pour indenter le code.
+@error_too_much_indentation = Il y a trop d'indentation ici. 
+L'indentation doit être la même pour toutes les instructions dans un bloc de code.
+@error_not_a_statement = Ceci n'est pas une instruction valide. 
+@error_not_a_statement2 = Ceci n'est pas une instruction valide. Vouliez-vous écrire {0} ?
+@error_invalid_expression = Ceci n'est pas une expression valide.
+@error_new_line_expected = Une nouvelle ligne est attendue ici.
+@error_unexpected_token = Un {0} est attendu ici.
+@error_missing_colon = Il doit y avoir un deux-points `:` au début de chaque bloc de code.
+@error_unexpected_assign = Vous ne pouvez pas faire une affectation ici. Pour vérifier l'égalité, utilisez `==` à la place.
+@error_invalid_for_syntax = Ceci n'est pas une boucle for valide. Une boucle for ressemble à ceci : 
+`for n in range(3):`
+Le `for` est toujours suivi de la variable de boucle, d'un `in` et ensuite d'une séquence. Dans cet exemple, le `n` est le nom de la variable, mais il peut être remplacé par tout autre nom.
+@error_unknown_method = Cette méthode n'existe pas.
+@error_bad_backslash = Le backslash peut être utilisé pour diviser les expressions sur plusieurs lignes. Mais vous devez ajouter une nouvelle ligne ensuite.
+@error_mixed_indentation = Ne mélangez pas les tabulations et les espaces.
+@error_expected_close_token = Virgule ou parenthèse fermante attendue.
+@error_wrong_dict_literal = Un : est attendu pour séparer les clés et les valeurs d'un dictionnaire.

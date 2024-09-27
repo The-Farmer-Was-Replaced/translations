@@ -1,0 +1,64 @@
+@error_code_after_block = Il ne devrait pas y avoir de code ici. Essayez de le supprimer ou de le mettre sur une nouvelle ligne.
+@error_wrong_number_args = {0} prend {1} arguments.
+@error_expected_no_args = {0} ne prend aucun argument.
+@error_wrong_args = Le {0}. argument de {1} était {2}. Ce n'est pas un argument valide.
+@error_syntax_error_in_function = Le fichier dans lequel cette fonction est définie contient une erreur de syntaxe.
+@error_append_on_non_list = `append()` ne peut être utilisé que sur des listes. Il ne peut pas être utilisé sur {0}.
+@error_add_on_non_set = `add()` ne peut être utilisé que sur des ensembles. Il ne peut pas être utilisé sur {0}.
+@error_remove_on_non_list_or_set = `remove()` ne peut être utilisé que sur des listes et des ensembles. Il ne peut pas être utilisé sur {0}.
+@error_pop_on_non_dict_or_list = `pop()` ne peut être utilisé que sur des listes et des dictionnaires. Il ne peut pas être utilisé sur {0}.
+@error_insert_on_non_list = `insert()` ne peut être utilisé que sur des listes. Il ne peut pas être utilisé sur {0}.
+@error_list_element_not_found = {0} n'est pas un élément de la liste.
+@error_set_element_not_found = {0} n'est pas un élément de l'ensemble.
+@error_index_out_of_bounds = L'indice {0} que vous avez essayé d'accéder était en dehors de la liste {1}.
+@error_index_out_of_bounds2 = L'indice que vous avez essayé d'accéder était en dehors de la liste.
+@error_arith_assign_not_used_on_number = {0} ne peut être utilisé que sur des nombres.
+@error_bool_op_not_used_on_bool = Un opérateur logique ne peut être utilisé que sur des expressions booléennes qui évaluent à `True` ou `False`.
+@error_bad_bin_operator = L'opérateur {0} ne peut pas être utilisé sur les opérandes {1} et {2}.
+@error_bad_unary_operator = L'opérateur {0} ne peut pas être utilisé sur {1}.
+@error_index = {0} ne peut pas être utilisé comme indice sur {1}.
+@error_index_on_non_indexable = Vous ne pouvez pas indexer dans {0}.
+@error_zero_step = La taille du pas ne peut pas être zéro.
+@error_index_on_tuple = Vous ne pouvez pas assigner un élément de tuple car les tuples sont immuables.
+@error_bad_key = {0} ne peut pas être utilisé comme clé.
+@error_slice_dict = Impossible de découper les dictionnaires.
+@error_key = {0} n'est pas une clé dans le dictionnaire.
+@error_condition_not_bool = {0} n'est pas une condition valide. La condition doit être une valeur booléenne. Cela signifie qu'elle doit être une expression qui est toujours soit `True`, soit `False`.
+@error_for_requires_iterable = {0} ne peut pas être itéré dans une boucle for. La boucle for doit recevoir une séquence à parcourir. Exemple :
+
+`for i in range(5):`
+Ici, range(5) renvoie la séquence `0,1,2,3,4`.
+@error_no_loop_to_break = `break` ne peut être utilisé qu'à l'intérieur d'une boucle.
+@error_no_loop_to_continue = `continue` ne peut être utilisé qu'à l'intérieur d'une boucle.
+@error_no_function_to_return_from = `return` ne peut être utilisé qu'à l'intérieur d'une fonction.
+@error_missing_unlock = Cela doit être débloqué avant de pouvoir être utilisé.
+@error_missing_x_unlock = {0} doit être débloqué avant que cela puisse être utilisé.
+@error_missing_trade_unlock = Spécifier un nombre à échanger nécessite que le multi-échange soit d'abord débloqué.
+@error_cant_trade_negative = Le nombre d'articles à échanger ne peut pas être négatif.
+@error_item_cant_be_traded = {0} ne peut pas être acheté.
+@error_name_not_defined = {0} n'a jamais été défini. Vous devez assigner une valeur à une variable avant de l'utiliser.
+@error_invalid_const = {0} n'existe pas.
+@error_invalid_const2 = Cela n'existe pas.
+@error_max_stack_size_reached = La taille maximale de la pile d'appels a été atteinte. Cela est probablement dû à trop d'appels de fonctions récursifs.
+@error_max_comparison_depth = La profondeur maximale de comparaison a été atteinte.
+@error_assign_type_mismatch = Le côté gauche de l'affectation ne correspondait pas au côté droit.
+@error_too_many_values_to_unpack = Le côté droit ne contient pas assez de valeurs à décompresser.
+@error_not_enough_values = Le côté droit contient trop de valeurs pour être décompressé dans le côté gauche.
+@error_empty_print = Impossible d'imprimer rien.
+@error_in_string = Impossible de vérifier si {0} est dans une chaîne.
+@error_collection_changed_size_during_iteration = Tentative de modification de la taille de la collection pendant l'itération.
+@error_wrong_use_of_max = Impossible de calculer le max de {0}.
+@error_wrong_use_of_min = Impossible de calculer le min de {0}.
+@error_function_as_condition = Tentative de vérification si la fonction {0} est `True`. C'est l'objet fonction lui-même, pas la valeur de retour de la fonction. Vouliez-vous appeler la fonction avec l'opérateur d'appel `()`?
+
+En Python, les objets fonctions sont évalués comme vrais, ce qui signifie que si vous les utilisez comme conditions, ils fonctionnent comme `True`, donc Python ne vous donnerait pas ce message d'erreur.
+
+Ceci est un message d'erreur de sauvegarde, vous pouvez le désactiver dans les options s'il vous gêne.
+@error_function_in_operator = Tentative d'utilisation de {1} sur la fonction {0}. C'est l'objet fonction lui-même, pas la valeur de retour de la fonction. Vouliez-vous appeler la fonction avec l'opérateur d'appel `()`?
+@error_shadow = Tentative de création d'une variable locale avec le nom {0}. {0} existe déjà dans une portée extérieure. Avoir deux variables avec le même nom est généralement une mauvaise idée.
+
+Lisez à propos des portées pour plus d'informations.
+
+Ceci est un message d'erreur de sauvegarde, vous pouvez le désactiver dans les options s'il vous gêne.
+@error_zero_step_size = La taille du pas ne peut pas être 0.
+@error_sequence_too_large = La séquence était trop grande pour être copiée.

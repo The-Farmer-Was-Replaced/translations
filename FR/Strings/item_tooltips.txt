@@ -1,0 +1,23 @@
+@item_tooltip_template_cost = 
+
+### Coût du commerce {{{{itemblock cost item {0}}}}}
+@item_tooltip_template_amount = 
+
+Vous avez {0}
+@item_descr_carrot = Obtenu en récoltant des carottes.
+@item_descr_carrot_seed = Utilisé pour cultiver des carottes en appelant `plant(Entities.Carrots)` sur un sol vide.
+@item_descr_empty_tank = Les réservoirs vides se transforment automatiquement en réservoirs d'eau avec le temps.
+@item_descr_fertilizer = Appelez `use_item(Items.Fertilizer)` pour faire pousser instantanément la plante sous le drone de 2s.
+@item_descr_gold = Trouvé dans des coffres au trésor dans les labyrinthes.
+@item_descr_hay = Obtenu en coupant de l'herbe.
+@item_descr_piggy = Cet article a été retiré du jeu.
+@item_descr_power = Obtenu en récoltant des tournesols. Le drone utilise automatiquement cela pour se déplacer deux fois plus vite.
+@item_descr_pumpkin = Obtenu en récoltant des citrouilles.
+@item_descr_pumpkin_seed = Utilisé pour cultiver des citrouilles en appelant `plant(Entities.Pumpkin)` sur un sol vide.
+@item_descr_sunflower_seed = Utilisé pour cultiver des tournesols en appelant `plant(Entities.Sunflower)` sur un sol vide.
+@item_descr_water_tank = Utilisé pour arroser le sol en appelant `use_item(Items.Water_Tank)`.
+@item_descr_wood = Obtenu à partir de buissons et d'arbres.
+@item_descr_cactus = Obtenu en récoltant des cactus triés.
+@item_descr_cactus_seed = Utilisé pour cultiver des cactus en appelant `plant(Entities.Cactus)` sur un sol vide.
+@item_descr_egg = Appelez `use_item(Items.Egg)` pour faire éclore un dinosaure majestueux.
+@item_descr_bones = Les os d'une créature ancienne.
