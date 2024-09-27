@@ -9,17 +9,21 @@ This repository contains various translations for the game "The Farmer Was Repla
 2. **Extract the Files**:
    - Extract the downloaded files.
 
-3. **Replace the Existing Files**:
+3. **Backup the Original Files**:
+   - Before replacing the existing files, create a backup of the original `EN` files. Copy the contents of the following directory to a safe location:
+     ```
+     ...\Steam\steamapps\common\The Farmer Was Replaced\TheFarmerWasReplaced_Data\StreamingAssets\Languages\EN
+     ```
+
+4. **Replace the Existing Files**:
    - Copy the extracted files into the following directory:
      ```
      ...\Steam\steamapps\common\The Farmer Was Replaced\TheFarmerWasReplaced_Data\StreamingAssets\Languages\EN
      ```
    - You will need to replace the existing files in the `EN` folder since the game is hardcoded to use this folder, and it does not officially support other languages.
 
-4. **Launch the Game**:
+5. **Launch the Game**:
    - Start the game, and it should now display the new language.
-
-
 
 ## Disclaimer
 
