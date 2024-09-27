@@ -1,0 +1,7 @@
+@warning_not_enough_items_to_trade = Пытался купить {0}, но не хватило предметов.
+@warning_no_space_to_plant = Пытался посадить {0}, но там уже что-то было.
+@warning_cant_plant_on_ground = Невозможно посадить {0} на {1}.
+@warning_missing_seed = Не было семян для посадки {0}.
+@warning_no_item_to_use = Пытался использовать {0}, но их не было.
+@warning_failed_swap_wrap = Пытался сделать обмен за пределами фермы. Это не разрешено.
+@warning_failed_swap_unswappable = Пытался обменять {0}, который нельзя обменять.

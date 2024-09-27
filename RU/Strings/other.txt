@@ -1,0 +1,3 @@
+@word_number = номер
+@word_direction = направление
+@run_cancelled = Запуск прерван

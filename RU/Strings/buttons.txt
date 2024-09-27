@@ -1,0 +1,10 @@
+@save = Сохранить
+@play = Играть
+@load = Загрузить
+@options = Настройки
+@join_discord = Discord
+@quit = Выйти
+@open_folder = Открыть папку
+@new_game = Новая игра
+@back = Назад
+@unlocks = Разблокировки

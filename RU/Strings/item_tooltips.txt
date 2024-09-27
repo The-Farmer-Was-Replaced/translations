@@ -1,0 +1,23 @@
+@item_tooltip_template_cost =
+
+### Стоимость торговли {{{{itemblock cost item {0}}}}}
+@item_tooltip_template_amount =
+
+У вас есть {0}
+@item_descr_carrot = Получается при сборе моркови.
+@item_descr_carrot_seed = Используется для выращивания моркови, вызывая `plant(Entities.Carrots)` на пустой почве.
+@item_descr_empty_tank = Пустые баки автоматически превращаются в баки с водой со временем.
+@item_descr_fertilizer = Вызовите `use_item(Items.Fertilizer)`, чтобы мгновенно вырастить растение под дроном на 2 секунды.
+@item_descr_gold = Находится в сундуках с сокровищами в лабиринтах.
+@item_descr_hay = Получается при скашивании травы.
+@item_descr_piggy = Этот предмет был удален из игры.
+@item_descr_power = Получается при сборе подсолнечников. Дрон автоматически использует это, чтобы двигаться в два раза быстрее.
+@item_descr_pumpkin = Получается при сборе тыкв.
+@item_descr_pumpkin_seed = Используется для выращивания тыкв, вызывая `plant(Entities.Pumpkin)` на пустой почве.
+@item_descr_sunflower_seed = Используется для выращивания подсолнечников, вызывая `plant(Entities.Sunflower)` на пустой почве.
+@item_descr_water_tank = Используется для полива земли, вызывая `use_item(Items.Water_Tank)`.
+@item_descr_wood = Получается из кустов и деревьев.
+@item_descr_cactus = Получается при сборе сортированных кактусов.
+@item_descr_cactus_seed = Используется для выращивания кактусов, вызывая `plant(Entities.Cactus)` на пустой почве.
+@item_descr_egg = Вызовите `use_item(Items.Egg)`, чтобы вылупился величественный динозавр.
+@item_descr_bones = Кости древнего существа.
