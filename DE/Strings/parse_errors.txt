@@ -1,0 +1,27 @@
+@error_missing_default_parameter = Ein nicht-Standard-Argument kann nicht einem Standard-Argument folgen.
+@error_invalid_name = {0} ist kein gültiger Name. Namen müssen mit einem Buchstaben beginnen und dürfen nur Buchstaben, Ziffern und Unterstriche enthalten. Es darf auch kein reserviertes Schlüsselwort sein.
+@error_reserved_keyword = {0} ist ein reserviertes Schlüsselwort. Sie können es nicht als Namen verwenden.
+@error_invalid_assign_expr = Dieser Ausdruck kann nicht zugewiesen werden.
+@error_no_statements = Ein Codeblock muss mindestens eine Anweisung enthalten.
+Eine Anweisung kann ein Funktionsaufruf wie `harvest()` oder eine Variablenzuweisung sein.
+Wenn Sie im Codeblock nichts tun möchten, verwenden Sie eine `pass`-Anweisung.
+@error_not_enough_indentation = Es gibt hier nicht genug Einrückung.
+Es muss mehr Einrückung nach einem : als davor geben, um den neuen Codeblock zu trennen.
+Verwenden Sie die Tabulatortaste, um den Code einzurücken.
+@error_too_much_indentation = Es gibt hier zu viel Einrückung.
+Die Einrückung muss für alle Anweisungen innerhalb eines Codeblocks gleich sein.
+@error_not_a_statement = Dies ist keine gültige Anweisung.
+@error_not_a_statement2 = Dies ist keine gültige Anweisung. Meinten Sie {0}?
+@error_invalid_expression = Dies ist kein gültiger Ausdruck.
+@error_new_line_expected = Hier wird eine neue Zeile erwartet.
+@error_unexpected_token = Hier wird ein {0} erwartet.
+@error_missing_colon = Am Anfang jedes Codeblocks muss ein Doppelpunkt `:` stehen.
+@error_unexpected_assign = Sie können hier keine Zuweisung vornehmen. Verwenden Sie stattdessen `==`, um auf Gleichheit zu prüfen.
+@error_invalid_for_syntax = Dies ist keine gültige for-Schleife. Eine for-Schleife sieht so aus:
+`for n in range(3):`
+Das `for` wird immer von der Schleifenvariablen, einem `in` und dann einer Sequenz gefolgt. In diesem Beispiel ist `n` der Variablenname, aber er kann durch jeden anderen Namen ersetzt werden.
+@error_unknown_method = Diese Methode existiert nicht.
+@error_bad_backslash = Der Backslash kann verwendet werden, um Ausdrücke auf mehrere Zeilen zu verteilen. Aber Sie müssen danach eine neue Zeile hinzufügen.
+@error_mixed_indentation = Mischen Sie keine Tabs und Leerzeichen.
+@error_expected_close_token = Erwartet ein Komma oder eine schließende Klammer.
+@error_wrong_dict_literal = Erwartet einen Doppelpunkt, um die Schlüssel und Werte eines Dicts zu trennen.

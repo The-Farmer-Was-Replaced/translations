@@ -1,0 +1,3 @@
+@word_number = Nummer
+@word_direction = Richtung
+@run_cancelled = Lauf Abgebrochen

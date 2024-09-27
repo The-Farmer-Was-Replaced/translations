@@ -1,0 +1,21 @@
+@plant_tooltip_template = {0}
+
+Grundwachstumszeit zwischen {1} und {2} Sekunden.
+Kann auf {3} wachsen.
+@object_tooltip_template_cost =
+
+### Benötigtes Saatgut {{{{itemblock cost object {0}}}}}
+@object_descr_grass = Wächst automatisch auf Rasen. Ernte es, um `Items.Hay` zu erhalten.
+@object_descr_bush = Ein kleiner Busch, der `Items.Wood` fallen lässt.
+@object_descr_tree = Bäume lassen mehr Holz fallen als Büsche. Sie wachsen langsamer, wenn andere Bäume in der Nähe wachsen.
+@object_descr_carrots = Karotten!
+@object_descr_pumpkin = Kürbisse wachsen zusammen, wenn sie neben anderen voll ausgewachsenen Kürbissen stehen. Etwa 1 von 5 Kürbissen stirbt, wenn er ausgewachsen ist.
+Wenn du einen Kürbis erntest, erhältst du `Items.Pumpkin` in der Menge, die der Kubikzahl der Kürbisse im Mega-Kürbis entspricht.
+@object_descr_sunflower = Sonnenblumen sammeln die Energie der Sonne. Wenn du sie erntest, erhältst du `Items.Power` in der Menge, die der Quadratwurzel der Anzahl der Sonnenblumen auf dem Feld entspricht.
+Wenn du eine Sonnenblume erntest, die nicht die maximale Anzahl an Blütenblättern hat, sterben alle Sonnenblumen.
+@object_descr_cactus = Kakteen gibt es in 10 verschiedenen Größen. Wenn geerntet, werden alle Kakteen auf dem Feld geerntet. Nur diejenigen, die in sortierter Reihenfolge stehen, lassen `Items.Cactus` fallen.
+@object_descr_hedge = Teil des Labyrinths. Züchte ein Labyrinth, indem du einen voll ausgewachsenen Busch düngst.
+@object_descr_treasure = Ein Schatz, der Gold in der Menge enthält, die der Seitenlänge des Labyrinths entspricht, in dem er versteckt ist. Er kann wie eine Pflanze geerntet werden.
+@object_descr_dinosaur = Ein majestätischer Dinosaurier. Er bewegt sich zufällig, bleibt aber eine Weile stehen, nachdem er gemessen wurde. Wenn du ihn erntest, werden alle angrenzenden Dinosaurier desselben Typs geerntet und lassen `Items.Bones` fallen.
+@object_descr_turf = Der Standardboden. Gras wächst automatisch darauf.
+@object_descr_soil = Der Aufruf von `till()` verwandelt den Boden in diesen. Ein weiterer Aufruf von `till()` verwandelt ihn wieder in Rasen.

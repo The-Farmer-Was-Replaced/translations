@@ -1,0 +1,10 @@
+@save = Speichern
+@play = Spielen
+@load = Laden
+@options = Optionen
+@join_discord = Discord
+@quit = Beenden
+@open_folder = Ordner öffnen
+@new_game = Neues Spiel
+@back = Zurück
+@unlocks = Freischaltungen
