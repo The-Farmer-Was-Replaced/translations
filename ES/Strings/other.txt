@@ -1,0 +1,3 @@
+@word_number = número
+@word_direction = dirección
+@run_cancelled = Carrera Abortada

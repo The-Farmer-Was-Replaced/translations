@@ -1,0 +1,27 @@
+@error_missing_default_parameter = Un argumento no predeterminado no puede seguir a un argumento predeterminado.
+@error_invalid_name = {0} no es un nombre válido. Los nombres deben comenzar con una letra y solo pueden contener letras, dígitos y guiones bajos. Tampoco puede ser una palabra clave reservada.
+@error_reserved_keyword = {0} es una palabra clave reservada. No puedes usarla como nombre.
+@error_invalid_assign_expr = No se puede asignar un valor a esta expresión.
+@error_no_statements = Un bloque de código debe contener al menos una declaración.
+Una declaración puede ser una llamada a una función como `harvest()` o una asignación de variable.
+Si deseas no hacer nada en el bloque de código, usa una declaración `pass`.
+@error_not_enough_indentation = No hay suficiente sangría aquí.
+Debe haber más sangría después de un : que antes para separar el nuevo bloque de código.
+Usa la tecla Tab para sangrar el código.
+@error_too_much_indentation = Hay demasiada sangría aquí.
+La sangría debe ser la misma para todas las declaraciones dentro de un bloque de código.
+@error_not_a_statement = Esto no es una declaración válida.
+@error_not_a_statement2 = Esto no es una declaración válida. ¿Quisiste escribir {0}?
+@error_invalid_expression = Esto no es una expresión válida.
+@error_new_line_expected = Se espera una nueva línea aquí.
+@error_unexpected_token = Se espera un {0} aquí.
+@error_missing_colon = Debe haber dos puntos `:` al comienzo de cada bloque de código.
+@error_unexpected_assign = No puedes hacer una asignación aquí. Para comprobar la igualdad usa `==` en su lugar.
+@error_invalid_for_syntax = Esto no es un bucle for válido. Un bucle for se ve así:
+`for n in range(3):`
+El `for` siempre va seguido de la variable del bucle, un `in` y luego una secuencia. En este ejemplo, `n` es el nombre de la variable, pero puede ser reemplazado por cualquier otro nombre.
+@error_unknown_method = East método no existe.
+@error_bad_backslash = La barra invertida se puede usar para dividir expresiones en varias líneas. Pero necesitas agregar una nueva línea después.
+@error_mixed_indentation = No mezcles tabulaciones y espacios.
+@error_expected_close_token = Se esperaba una coma o un corchete de cierre.
+@error_wrong_dict_literal = Se esperaba un : para separar las claves y los valores de un diccionario.

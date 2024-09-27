@@ -1,0 +1,515 @@
+@code_tooltip_harvest = `harvest()`
+Cosecha la entidad bajo el dron.
+Si cosechas una entidad que no se puede cosechar, será destruida.
+
+devuelve `True` si se eliminó una entidad, `False` en caso contrario.
+
+toma el tiempo de `200` operaciones para ejecutar si se eliminó una entidad, `1` operación en caso contrario.
+
+ejemplo de uso:
+`harvest()`
+@code_tooltip_can_harvest = `puede_harvest()`
+Se utiliza para saber si las plantas están completamente crecidas.
+
+devuelve `True` si hay una entidad bajo el dron que está lista para ser cosechada, `False` en caso contrario.
+
+toma el tiempo de `1` operación para ejecutar.
+
+ejemplo de uso:
+`si puede_harvest():
+    harvest()`
+@code_tooltip_range = `rango()`
+Genera una secuencia de números.
+
+sobrecargas:
+`rango(fin)` devuelve una secuencia de números desde `0`(inclusive) hasta `fin`(exclusivo).
+`rango(inicio,fin)` devuelve una secuencia de números desde `inicio`(inclusive) hasta `fin`(exclusivo).
+`rango(inicio,fin,paso)` devuelve una secuencia de números desde `inicio`(inclusive) hasta `fin`(exclusivo) en pasos de tamaño `paso`.
+
+toma el tiempo de `1` operación para ejecutar.
+
+ejemplo de uso:
+`para i en rango(10):
+    imprimir(i)
+
+para i en rango(2,6):
+    imprimir(i)
+
+para i en rango(10, 0, -1):
+    imprimir(i)`
+@code_tooltip_plant = `plantar(entidad)`
+Planta la `entidad` especificada bajo el dron si se puede plantar.
+De lo contrario, simplemente no hace nada.
+
+devuelve `True` si tuvo éxito, `False` en caso contrario.
+
+toma el tiempo de `200` operaciones para ejecutar si tuvo éxito, `1` operación en caso contrario.
+
+ejemplo de uso:
+`plantar(Entidades.Arbusto)`
+@code_tooltip_move = `move(dirección)`
+Mueve el dron en la `dirección` especificada por un tile.
+Si el dron se mueve sobre el borde de la granja, se envuelve de nuevo al otro lado de la granja.
+
+`East`  =  derecha
+`West`  =  izquierda
+`North`  =  arriba
+`South`  =  abajo
+
+devuelve `True` si el dron se ha movido, `False` en caso contrario.
+
+toma el tiempo de `200` operaciones para ejecutar si el dron se ha movido, `1` operación en caso contrario.
+
+ejemplo de uso:
+`move(North)`
+@code_tooltip_swap = `intercambiar(dirección)`
+Intercambia la entidad bajo el dron con la entidad junto al dron en la `dirección` especificada.
+No funciona en todas las entidades.
+También funciona si una (o ambas) de las entidades son `None`.
+
+devuelve `True` si tuvo éxito, `False` en caso contrario.
+
+toma el tiempo de `200` operaciones para ejecutar en caso de éxito, `1` operación en caso contrario.
+
+ejemplo de uso:
+`intercambiar(North)`
+@code_tooltip_till = `arar()`
+Ara el suelo bajo el dron en `Suelos.Tierra`. Si ya es tierra, cambiará el suelo de nuevo a `Suelos.Césped`.
+
+devuelve `None`
+
+toma el tiempo de `200` operaciones para ejecutar.
+
+ejemplo de uso:
+`arar()`
+@code_tooltip_get_pos_x = `get_pos_x()`
+Obtiene la posición x actual del dron.
+La posición x comienza en `0` en el `West` y aumenta en la dirección `East`.
+
+devuelve un número que representa la coordenada x actual del dron.
+
+toma el tiempo de `1` operación para ejecutar.
+
+ejemplo de uso:
+`x, y = get_pos_x(), get_pos_y()`
+@code_tooltip_get_pos_y = `get_pos_y()`
+Obtiene la posición y actual del dron.
+La posición y comienza en `0` en el `South` y aumenta en la dirección `North`.
+
+devuelve un número que representa la coordenada y actual del dron.
+
+toma el tiempo de `1` operación para ejecutar.
+
+ejemplo de uso:
+`x, y = get_pos_x(), get_pos_y()`
+@code_tooltip_get_world_size = `obtener_tamaño_mundo()`
+Obtiene el tamaño actual de la granja.
+
+devuelve la longitud del lado de la cuadrícula en la dirección norte a sur.
+
+toma el tiempo de `1` operación para ejecutar.
+
+ejemplo de uso:
+`para i en rango(obtener_tamaño_mundo()):
+    move(North)`
+@code_tooltip_get_entity_type = `get_entity_type()`
+Descubre qué tipo de entidad está bajo el dron.
+
+devuelve `None` si el tile está vacío, de lo contrario devuelve el tipo de la entidad bajo el dron.
+
+toma el tiempo de `1` operación para ejecutar.
+
+ejemplo de uso:
+`si get_entity_type() == Entidades.Hierba:
+    harvest()`
+@code_tooltip_get_ground_type = `obtener_tipo_suelo()`
+Descubre qué tipo de suelo está bajo el dron.
+
+devuelve el tipo de suelo bajo el dron.
+
+toma el tiempo de `1` operación para ejecutar.
+
+ejemplo de uso:
+`si obtener_tipo_suelo() != Suelos.Tierra:
+    arar()`
+@code_tooltip_get_time = `obtener_tiempo()`
+Obtiene el tiempo actual del juego.
+
+devuelve el tiempo en segundos desde el inicio del juego.
+
+toma el tiempo de `1` operación para ejecutar.
+
+ejemplo de uso:
+`inicio = obtener_tiempo()
+
+hacer_algo()
+
+tiempo_pasado = obtener_tiempo() - inicio`
+@code_tooltip_get_op_count = `obtener_conteo_op()`
+Se utiliza para medir el número de operaciones realizadas.
+
+devuelve el número de operaciones realizadas desde el inicio de la ejecución.
+
+toma el tiempo de `1` operación para ejecutar.
+
+ejemplo de uso:
+`hacer_algo()
+
+imprimir(obtener_conteo_op())`
+@code_tooltip_trade = `comerciar(item)`
+Intenta comprar el `item` especificado.
+Si el `item` no se puede comprar o no tienes los recursos necesarios, simplemente no hace nada.
+
+sobrecargas:
+`comerciar(item)`: Compra el `item` una vez.
+`comerciar(item, n)`: Si `Desbloqueos.Comercio_Múltiple` está desbloqueado, esto comprará el `item` `n` veces inmediatamente. Si no puedes permitirte todos los `n` items, no comprará ninguno. Si `Desbloqueos.Comercio_Múltiple` no está desbloqueado, lanza un error.
+
+devuelve `True` si pudo comprar los items, `False` en caso contrario.
+
+toma el tiempo de `200` operaciones para ejecutar si tuvo éxito, `1` operación en caso contrario.
+
+ejemplo de uso:
+`si num_desbloqueados(Desbloqueos.Comercio_Múltiple) > 0:
+    comerciar(Items.Semilla_Zanahoria, 10)
+de lo contrario:
+    para i en rango(10):
+        comerciar(Items.Semilla_Zanahoria)`
+@code_tooltip_use_item = `usar_item(item)`
+Intenta usar el `item` especificado. Solo se puede usar con algunos items, incluyendo `Items.Tanque_Agua`, `Items.Fertilizante` y `Items.Huevo`.
+
+devuelve `True` si se usó un item, `False` en caso contrario.
+
+toma el tiempo de `200` operaciones para ejecutar si tuvo éxito, `1` operación en caso contrario.
+
+ejemplo de uso:
+`usar_item(Items.Fertilizante)`
+@code_tooltip_get_water = `obtener_agua()`
+Obtiene el nivel de agua actual bajo el dron.
+
+devuelve el nivel de agua bajo el dron como un número entre `0` y `1`.
+
+toma el tiempo de `1` operación para ejecutar.
+
+ejemplo de uso:
+`si obtener_agua() < 0.5:
+    usar_item(Items.Tanque_Agua)`
+@code_tooltip_do_a_flip = `hacer_un_flip()`
+¡Hace que el dron haga un giro! Esta acción no se ve afectada por las mejoras de velocidad.
+
+devuelve `None`
+
+toma 1s para ejecutar.
+
+ejemplo de uso:
+`mientras True:
+    hacer_un_flip()`
+@code_tooltip_print = `imprimir(algo)`
+Imprime `algo` en el aire sobre el dron usando humo. Esta acción no se ve afectada por las mejoras de velocidad.
+Se pueden imprimir varios valores a la vez.
+
+devuelve `None`
+
+toma 1s para ejecutar.
+
+ejemplo de uso:
+`imprimir("suelo:", obtener_tipo_suelo())`
+@code_tooltip_len = `len(colección)`
+Obtiene el número de elementos en una lista, conjunto, diccionario o tupla.
+
+devuelve la longitud de la `colección`.
+
+toma el tiempo de `1` operación para ejecutar.
+
+ejemplo de uso:
+`para i en rango(len(lista)):
+    lista[i] += 1`
+@code_tooltip_list = `lista()`
+Crea una nueva lista.
+
+sobrecargas:
+`lista(colección)`: Crea una lista con los elementos de una lista, conjunto, diccionario o tupla existente.
+
+devuelve una lista.
+
+toma el tiempo de `1 + len(colección)` operaciones para ejecutar.
+
+ejemplo de uso:
+`nueva_lista = lista((1,2,3))`
+@code_tooltip_dict = `diccionario()`
+Crea un nuevo diccionario.
+
+sobrecargas:
+`diccionario(diccionario)`: Crea una copia de `diccionario`.
+
+devuelve un diccionario.
+
+toma el tiempo de `1 + len(diccionario)` operaciones para ejecutar.
+
+ejemplo de uso:
+`nuevo_diccionario = diccionario()`
+@code_tooltip_set = `conjunto()`
+Crea un nuevo conjunto.
+
+sobrecargas:
+`conjunto(colección)`: Crea un conjunto con los elementos de una lista, conjunto, diccionario o tupla existente.
+
+devuelve un conjunto.
+
+toma el tiempo de `1 + len(colección)` operaciones para ejecutar.
+
+ejemplo de uso:
+`nuevo_conjunto = conjunto((1,2,3))`
+@code_tooltip_set_execution_speed = `establecer_velocidad_ejecución(velocidad)`
+Limita la velocidad a la que se ejecuta el programa para ver mejor lo que está sucediendo.
+
+Una `velocidad` de `1` es la velocidad que tiene el dron sin ninguna mejora de velocidad.
+Una `velocidad` de `10` hace que el código se ejecute `10` veces más rápido y corresponde a la velocidad del dron después de `9` mejoras de velocidad.
+Una `velocidad` de `0.5` hace que el código se ejecute a la mitad de la velocidad sin mejoras de velocidad. Esto puede ser útil para ver lo que hace el código.
+
+Si `velocidad` es más rápida de lo que la ejecución puede ir actualmente, simplemente irá a la velocidad máxima.
+
+Si `velocidad` es `0` o negativa, la velocidad se cambia de nuevo a la velocidad máxima.
+El efecto también se detendrá cuando la ejecución se detenga.
+
+devuelve `None`
+
+toma el tiempo de `200` operaciones para ejecutar.
+
+ejemplo de uso:
+`establecer_velocidad_ejecución(1)`
+@code_tooltip_set_farm_size = `establecer_tamaño_granja(tamaño)`
+Limita el tamaño de la granja para ver mejor lo que está sucediendo.
+También limpia la granja y restablece la posición del dron.
+Establece la granja en una cuadrícula de `tamaño` x `tamaño`.
+El `tamaño` más pequeño posible es `3`.
+Un `tamaño` menor que `3` cambiará la cuadrícula de nuevo a su tamaño completo.
+El efecto también se detendrá cuando la ejecución se detenga.
+
+devuelve `None`
+
+toma el tiempo de `200` operaciones para ejecutar.
+
+ejemplo de uso:
+`establecer_tamaño_granja(5)`
+@code_tooltip_num_items = `num_items(item)`
+Descubre cuántos `item` tienes actualmente.
+
+devuelve el número de `item` que tienes actualmente en tu inventario.
+
+toma el tiempo de `1` operación para ejecutar.
+
+ejemplo de uso:
+`si num_items(Items.Fertilizante) == 0:
+    comerciar(Items.Fertilizante)`
+@code_tooltip_get_cost = `obtener_costo(cosa)`
+Obtiene el costo de una `cosa`.
+
+Si `cosa` es un item, obtiene el costo de comprarlo al usar `comerciar(item)`.
+Si `cosa` es una entidad, obtiene la semilla necesaria para plantarla.
+Si `cosa` es un desbloqueo, obtiene el costo de desbloquearlo.
+
+devuelve un diccionario con items como claves y números como valores. Cada item se asigna a cuánto se necesita de él.
+devuelve `None` cuando se usa en un desbloqueo mejorable que ya está al nivel máximo.
+
+toma el tiempo de `1` operación para ejecutar.
+
+ejemplo de uso:
+`costo = obtener_costo(Desbloqueos.Zanahorias)
+para item en costo:
+    si num_items(item) < costo[item]:
+        imprimir("no hay suficientes items para desbloquear zanahorias")`
+@code_tooltip_clear = `limpiar()`
+Elimina todo de la granja y mueve el dron de nuevo a la posición `(0,0)`.
+
+devuelve `None`
+
+toma el tiempo de `200` operaciones para ejecutar.
+
+ejemplo de uso:
+`limpiar()`
+@code_tooltip_get_companion = `obtener_compañero()`
+Obtiene la preferencia de compañero de la planta bajo el dron.
+
+devuelve una lista de la forma `[tipo_compañero, posición_x_compañero, posición_y_compañero]`
+
+toma el tiempo de `1` operación para ejecutar.
+
+ejemplo de uso:
+`compañero = obtener_compañero()
+si compañero != None:
+    imprimir(compañero)`
+@code_tooltip_unlock = `desbloquear(desbloqueo)`
+Tiene exactamente el mismo efecto que hacer clic en el botón correspondiente a `desbloqueo` en el árbol de investigación.
+
+devuelve `True` si el desbloqueo fue exitoso, `False` en caso contrario.
+
+toma el tiempo de `200` operaciones para ejecutar si tuvo éxito, `1` operación en caso contrario.
+
+ejemplo de uso:
+`desbloquear(Desbloqueos.Zanahorias)`
+@code_tooltip_num_unlocked = `num_desbloqueados(cosa)`
+Se utiliza para verificar si un desbloqueo, entidad, suelo o item ya está desbloqueado.
+
+devuelve `1` más el número de veces que `cosa` ha sido mejorada si `cosa` es mejorable. De lo contrario, devuelve `1` si `cosa` está desbloqueada, `0` en caso contrario.
+
+toma el tiempo de `1` operación para ejecutar.
+
+ejemplo de uso:
+`si num_desbloqueados(Desbloqueos.Comercio_Múltiple) > 0:
+    comerciar(Items.Semilla_Zanahoria, 10)
+de lo contrario:
+    para i en rango(10):
+        comerciar(Items.Semilla_Zanahoria)`
+@code_tooltip_reset = `reiniciar()`
+Restablece la granja a un cuadrado de 1x1, elimina todos los recursos y bloquea la mayoría de los desbloqueos.
+No elimina ninguno de tus códigos.
+
+devuelve `None`
+
+toma el tiempo de `200` operaciones para ejecutar.
+
+ejemplo de uso:
+`reiniciar()`
+@code_tooltip_measure = `medir()`
+Puede medir algunos valores en algunas entidades. El efecto de esto depende de la entidad.
+
+sobrecargas:
+`medir()` mide la entidad bajo el dron.
+`medir(dirección)` mide la entidad vecina en la `dirección` del dron.
+
+devuelve el número de pétalos de un girasol.
+devuelve la siguiente posición para un tesoro.
+devuelve el tamaño de un cactus.
+devuelve el número correspondiente al tipo de un dinosaurio.
+devuelve `None` para todas las demás entidades.
+
+toma el tiempo de `1` operación para ejecutar.
+
+ejemplo de uso:
+`num_pétalos = medir()`
+@code_tooltip_timed_reset = `reinicio_temporizado()`
+Inicia una carrera cronometrada para la tabla de clasificación. Guarda el juego antes de la carrera y luego carga esa partida guardada después para que no puedas ganar ningún item durante la carrera.
+
+devuelve `None`
+
+toma el tiempo de `200` operaciones para ejecutar.
+
+ejemplo de uso:
+`reinicio_temporizado()`
+@code_tooltip_quick_print = `impresión_rápida()`
+Imprime un valor igual que `imprimir()` pero no se detiene para escribirlo en el aire, por lo que solo se puede encontrar en la página de salida.
+
+devuelve `None`
+
+toma el tiempo de `1` operación para ejecutar.
+
+ejemplo de uso:
+`impresión_rápida("hola mamá")`
+@code_tooltip_max = `max(a,b)`
+Obtiene el máximo de una secuencia de elementos o varios argumentos pasados.
+Se puede usar en números y cadenas.
+
+sobrecargas:
+`max(a,b,c)`: Devuelve el máximo de los argumentos pasados.
+`max(secuencia)`: Devuelve el máximo de todos los valores en una secuencia.
+
+toma el tiempo de #comparaciones operaciones para ejecutar.
+
+ejemplo de uso:
+`max([3,6,34,16])`
+@code_tooltip_min = `min(a,b)`
+Obtiene el mínimo de una secuencia de elementos o varios argumentos pasados.
+Se puede usar en números y cadenas.
+
+sobrecargas:
+`min(a,b,c)`: Devuelve el mínimo de los argumentos pasados.
+`min(secuencia)`: Devuelve el mínimo de todos los valores en una secuencia.
+
+el tiempo de ejecución depende de la entrada.
+
+ejemplo de uso:
+`min([3,6,34,16])`
+@code_tooltip_abs = `abs(número)`
+Calcula el valor absoluto de un `número`.
+
+devuelve `número` si `número` es positivo, `-número` en caso contrario.
+
+toma el tiempo de #comparaciones operaciones para ejecutar.
+
+ejemplo de uso:
+`abs(-69)`
+@code_tooltip_random = `aleatorio()`
+Muestra un número aleatorio entre 0 (inclusive) y 1 (exclusivo).
+
+devuelve el número aleatorio.
+
+toma el tiempo de `1` operación para ejecutar.
+
+ejemplo de uso:
+`def elemento_aleatorio(lista):
+    índice = aleatorio() * len(lista) // 1
+    return lista[índice]`
+@code_tooltip_append = `lista.append(elemento)`
+Añade `elemento` al final de la `lista`.
+
+devuelve `None`
+
+toma el tiempo de `1` operación para ejecutar.
+
+ejemplo de uso:
+`lista = []
+lista.append(1)`
+@code_tooltip_add = `conjunto.add(elemento)`
+Añade `elemento` al `conjunto`.
+
+devuelve `None`
+
+toma el tiempo de `1` operación para ejecutar.
+
+ejemplo de uso:
+`conjunto = {0}
+conjunto.add(1)`
+@code_tooltip_remove = `colección.remove(elemento)`
+Elimina la primera ocurrencia de `elemento` de la `colección`.
+
+devuelve `None`
+
+toma el tiempo de `1` operación para ejecutar en un conjunto, #comparaciones operaciones en una lista.
+
+ejemplo de uso:
+`lista = [Verdadero, Falso, Ninguno]
+lista.remove(Falso)`
+@code_tooltip_pop = `colección.pop()`
+Elimina el último elemento de una lista o el elemento especificado de un diccionario.
+`lista.pop(i)` elimina el elemento en el índice `i` de la `lista`.
+
+devuelve el elemento eliminado
+
+toma el tiempo de `1` operación para ejecutar en un diccionario, `len(lista) - i + 1` operaciones en una lista.
+
+ejemplo de uso:
+`lista = [Verdadero, Falso, Ninguno]
+lista.pop(0)`
+@code_tooltip_insert = `lista.insert(i, elemento)`
+Inserta `elemento` en la `lista` en el índice `i`.
+
+devuelve `None`
+
+toma el tiempo de `len(lista) - i + 1` operaciones.
+
+ejemplo de uso:
+`lista = [1,2]
+lista.insert(0, 0)`
+@code_tooltip_Items = Contiene todos los items que pueden estar en el inventario. Se puede iterar con un bucle `for`.
+@code_tooltip_Entities = Contiene todas las plantas y otras entidades que pueden estar en un tile de suelo de la granja. Se puede iterar con un bucle `for`.
+@code_tooltip_Grounds = Contiene todos los posibles tiles de suelo. Se puede iterar con un bucle `for`.
+@code_tooltip_Unlocks = Contiene todos los desbloqueos y mejoras en el menú de investigación. Se puede iterar con un bucle `for`.
+@code_tooltip_for = Un bucle que itera sobre todos los elementos de una secuencia. Algunos lenguajes llaman a esto un bucle "foreach".
+@code_tooltip_while = Bucle que se ejecuta hasta que la condición sea falsa.
+@code_tooltip_def = Define una función.
+@code_tooltip_True = Un valor booleano que siempre es verdadero.
+@code_tooltip_False = Un valor booleano que siempre es falso.
+@code_tooltip_if = Ejecuta código si la condición es `Verdadero`.
+@code_tooltip_None = Un valor que representa que no hay valor.
+@code_tooltip_continue = Continúa inmediatamente con la siguiente iteración del bucle. Si hay bucles anidados, esto siempre afectará al bucle más interno.
+@code_tooltip_break = Sale de un bucle y continúa ejecutando las declaraciones después del bucle. Si hay bucles anidados, esto siempre afectará al bucle más interno.

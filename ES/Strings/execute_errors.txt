@@ -1,0 +1,64 @@
+@error_code_after_block = No debería haber ningún código aquí. Intenta eliminarlo o ponerlo en una nueva línea.
+@error_wrong_number_args = {0} toma {1} argumentos.
+@error_expected_no_args = {0} no toma ningún argumento.
+@error_wrong_args = El {0}. argumento de {1} fue {2}. East no es un argumento válido.
+@error_syntax_error_in_function = El archivo en el que se define esta función tiene un error de sintaxis.
+@error_append_on_non_list = `append()` solo se puede usar en listas. No se puede usar en {0}.
+@error_add_on_non_set = `add()` solo se puede usar en conjuntos. No se puede usar en {0}.
+@error_remove_on_non_list_or_set = `remove()` solo se puede usar en listas y conjuntos. No se puede usar en {0}.
+@error_pop_on_non_dict_or_list = `pop()` solo se puede usar en listas y diccionarios. No se puede usar en {0}.
+@error_insert_on_non_list = `insert()` solo se puede usar en listas. No se puede usar en {0}.
+@error_list_element_not_found = {0} no es un elemento en la lista.
+@error_set_element_not_found = {0} no es un elemento del conjunto.
+@error_index_out_of_bounds = El índice {0} que intentaste acceder estaba fuera de la lista {1}.
+@error_index_out_of_bounds2 = El índice que intentaste acceder estaba fuera de la lista.
+@error_arith_assign_not_used_on_number = {0} solo se puede usar en números.
+@error_bool_op_not_used_on_bool = Un operador lógico solo se puede usar en expresiones booleanas que evalúan a `True` o `False`.
+@error_bad_bin_operator = El operador {0} no se puede usar en los operandos {1} y {2}.
+@error_bad_unary_operator = El operador {0} no se puede usar en {1}.
+@error_index = {0} no se puede usar como índice en {1}.
+@error_index_on_non_indexable = No puedes indexar en {0}.
+@error_zero_step = El tamaño del paso no puede ser cero.
+@error_index_on_tuple = No puedes asignar un elemento de una tupla porque las tuplas son inmutables.
+@error_bad_key = {0} no se puede usar como clave.
+@error_slice_dict = No se pueden cortar diccionarios.
+@error_key = {0} no es una clave en el diccionario.
+@error_condition_not_bool = {0} no es una condición válida. La condición debe ser un valor booleano. Esto significa que debe ser una expresión que siempre sea `True` o `False`.
+@error_for_requires_iterable = {0} no se puede iterar en un bucle for. El bucle for debe recibir una secuencia para iterar. Ejemplo:
+
+`for i in range(5):`
+Aquí range(5) devuelve la secuencia `0,1,2,3,4`.
+@error_no_loop_to_break = `break` solo se puede usar dentro de un bucle.
+@error_no_loop_to_continue = `continue` solo se puede usar dentro de un bucle.
+@error_no_function_to_return_from = `return` solo se puede usar dentro de una función.
+@error_missing_unlock = Esto debe ser desbloqueado antes de que pueda ser usado.
+@error_missing_x_unlock = {0} debe ser desbloqueado antes de que esto pueda ser usado.
+@error_missing_trade_unlock = Especificar un número para comerciar requiere que el comercio múltiple esté desbloqueado primero.
+@error_cant_trade_negative = El número de artículos a comerciar no puede ser negativo.
+@error_item_cant_be_traded = {0} no se puede comprar.
+@error_name_not_defined = {0} nunca ha sido definido. Debes asignar un valor a una variable antes de usarla.
+@error_invalid_const = {0} no existe.
+@error_invalid_const2 = Esto no existe.
+@error_max_stack_size_reached = Se ha alcanzado el tamaño máximo de la pila de llamadas. Esto es probablemente debido a demasiadas llamadas recursivas a funciones.
+@error_max_comparison_depth = Se ha alcanzado la profundidad máxima de comparación.
+@error_assign_type_mismatch = El lado izquierdo de la asignación no coincide con el lado derecho.
+@error_too_many_values_to_unpack = El lado derecho no contiene suficientes valores para desempaquetar.
+@error_not_enough_values = El lado derecho contiene demasiados valores para ser desempaquetados en el lado izquierdo.
+@error_empty_print = No se puede imprimir nada.
+@error_in_string = No se puede comprobar si {0} está en una cadena.
+@error_collection_changed_size_during_iteration = Se intentó cambiar el tamaño de la colección durante la iteración.
+@error_wrong_use_of_max = No se puede calcular el máximo de {0}.
+@error_wrong_use_of_min = No se puede calcular el mínimo de {0}.
+@error_function_as_condition = Intentando comprobar si la función {0} es `True`. East es el objeto de la función en sí, no el valor de retorno de la función. ¿Quisiste llamar a la función con el operador de llamada `()`?
+
+En Python, los objetos de función son verdaderos, lo que significa que si los usas como condiciones, funcionan como `True`, por lo que Python no te daría este mensaje de error.
+
+East es un mensaje de error de salvaguardia, puedes desactivarlo en las opciones si te molesta.
+@error_function_in_operator = Intentando usar {1} en la función {0}. East es el objeto de la función en sí, no el valor de retorno de la función. ¿Quisiste llamar a la función con el operador de llamada `()`?
+@error_shadow = Intentando crear una variable local con el nombre {0}. {0} ya existe en un ámbito exterior. Tener dos variables con el mismo nombre suele ser una mala idea.
+
+Lee sobre los ámbitos para más información.
+
+East es un mensaje de error de salvaguardia, puedes desactivarlo en las opciones si te molesta.
+@error_zero_step_size = El tamaño del paso no puede ser 0.
+@error_sequence_too_large = La secuencia era demasiado grande para copiar.

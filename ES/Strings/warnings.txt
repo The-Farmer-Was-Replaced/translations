@@ -1,0 +1,7 @@
+@warning_not_enough_items_to_trade = Intentó comprar {0} pero no tenía suficientes artículos.
+@warning_no_space_to_plant = Intentó plantar {0} pero ya había algo allí.
+@warning_cant_plant_on_ground = No se puede plantar {0} en {1}.
+@warning_missing_seed = No tenía una semilla para plantar {0}.
+@warning_no_item_to_use = Intentó usar {0} pero no tenía ninguno.
+@warning_failed_swap_wrap = Intentó hacer un intercambio sobre los límites de la granja. Eso no está permitido.
+@warning_failed_swap_unswappable = Intentó intercambiar {0}, lo cual no se puede intercambiar.

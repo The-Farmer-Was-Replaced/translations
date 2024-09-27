@@ -1,0 +1,12 @@
+@popup_warning_delete_files = ¿Desea eliminar {0} permanentemente? Esto no se puede deshacer.
+@popup_warning_delete_save = ¿Está seguro de que desea eliminar {0}?
+@delete = Eliminar
+@cancel = Cancelar
+@popup_warning_exit_game = ¿Desea guardar antes de salir?
+@popup_warning_load_game = ¿Desea guardar antes de cargar?
+@save = Guardar
+@don't save = No Guardar
+@popup_warning_corrupted_save = Parece que hubo un problema al cargar {0}. Consulte la sección sobre copias de seguridad para obtener más información.
+@popup_warning_failed_read_save = No se pudo leer los archivos de guardado de {0}. Asegúrese de cerrar todos los demás programas que acceden a los archivos e intente nuevamente.
+@popup_warning_failed_write_save = No se pudo escribir en los archivos de guardado de {0}. Asegúrese de cerrar todos los demás programas que acceden a los archivos e intente nuevamente.
+@ok = Aceptar

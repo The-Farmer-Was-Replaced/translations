@@ -1,0 +1,10 @@
+@save = Guardar
+@play = Jugar
+@load = Cargar
+@options = Opciones
+@join_discord = Discord
+@quit = Salir
+@open_folder = Abrir Carpeta
+@new_game = Nuevo Juego
+@back = Atrás
+@unlocks = Desbloqueos

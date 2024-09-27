@@ -1,0 +1,21 @@
+@plant_tooltip_template = {0}
+
+Tiempo de crecimiento base entre {1} y {2} segundos.
+Puede crecer en {3}.
+@object_tooltip_template_cost =
+
+### Semilla requerida {{{{itemblock cost object {0}}}}}
+@object_descr_grass = Crece automáticamente en césped. Cosecharlo para obtener `Items.Hay`.
+@object_descr_bush = Un pequeño arbusto que deja caer `Items.Wood`.
+@object_descr_tree = Los árboles dejan caer más madera que los arbustos. Tardan más en crecer si otros árboles crecen cerca de ellos.
+@object_descr_carrots = ¡Zanahorias!
+@object_descr_pumpkin = Las calabazas crecen juntas cuando están al lado de otras calabazas completamente crecidas. Aproximadamente 1 de cada 5 calabazas muere cuando crece.
+Cuando cosechas una calabaza obtienes `Items.Pumpkin` igual al número de calabazas en la mega calabaza al cubo.
+@object_descr_sunflower = Los girasoles recolectan la energía del sol. Cosecharlos te dará `Items.Power` igual a la raíz cuadrada del número de girasoles en la granja.
+Si cosechas un girasol que no tiene el número máximo de pétalos, todos los girasoles morirán.
+@object_descr_cactus = Los cactus vienen en 10 tamaños diferentes. Al cosechar, todos los cactus en el campo serán cosechados. Solo aquellos que estén en orden serán los que dejen caer `Items.Cactus`.
+@object_descr_hedge = Parte del laberinto. Crea un laberinto fertilizando un arbusto completamente crecido.
+@object_descr_treasure = Un tesoro que contiene oro igual a la longitud del lado del laberinto en el que está escondido. Puede ser cosechado como una planta.
+@object_descr_dinosaur = Un majestuoso dinosaurio. Se mueve aleatoriamente pero no se moverá por un tiempo después de ser medido. Cosecharlo cosecha todos los dinosaurios adyacentes del mismo tipo y hace que dejen caer `Items.Bones`.
+@object_descr_turf = El suelo predeterminado. La hierba crecerá automáticamente en él.
+@object_descr_soil = Llamar a `till()` convierte el suelo en esto. Llamar a `till()` nuevamente lo cambia de nuevo a césped.
