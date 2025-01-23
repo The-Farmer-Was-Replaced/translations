@@ -1,4 +1,4 @@
-# translations for version 21.01.2025
+# translations for version 23.01.2025
 This repository contains various translations for the game "The Farmer Was Replaced."
 
 ## How to change the language of the game
