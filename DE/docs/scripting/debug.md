@@ -1,16 +1,17 @@
 # Debug
-Manchmal funktioniert Ihr Code einfach nicht und Sie müssen herausfinden, warum. Es gibt ein paar Werkzeuge, die Ihnen dabei helfen können.
 
-Das erste ist, das Programm Schritt für Schritt auszuführen.
-Sie können in den Schritt-für-Schritt-Modus wechseln, indem Sie auf die Schaltfläche neben der Ausführen-Schaltfläche klicken oder einen Haltepunkt setzen.
+Manchmal funktioniert dein Code einfach nicht und du musst herausfinden, warum. Es gibt ein paar Werkzeuge, die dir dabei helfen.
 
-Haltepunkte können hinzugefügt werden, indem Sie auf das Haltepunkt-Panel links vom Code klicken.
+Das Erste ist, das Programm Schritt für Schritt auszuführen.
+Du kannst den Schritt-für-Schritt-Modus mit dem Button neben dem Ausführen-Button aktivieren oder einen Haltepunkt setzen.
+
+Haltepunkte können hinzugefügt werden, indem du auf das Haltepunktfeld links des Codes klickst.
 ![](Breakpoints227)
-Wenn die Ausführung die Zeile erreicht, in der sich der Haltepunkt befindet, wechselt sie automatisch in den Schritt-für-Schritt-Modus.
+Wenn die Ausführung die Zeile mit dem Haltepunkt erreicht, wechselt es automatisch in den Schritt-für-Schritt-Modus.
 
-Wenn Sie mit der Maus über eine Variable fahren, wird deren aktueller Wert angezeigt.
+Wenn du über eine Variable fährst, wird ihr aktueller Wert angezeigt.
 
-Die `print()`-Funktion kann ebenfalls sehr nützlich sein. Sie gibt jeden Wert, der an sie übergeben wird, direkt in die Luft aus.
+Die `print()` Funktion kann auch sehr nützlich sein. Sie druckt jeden übergebenen Wert direkt in die Luft.
 
 Beispiele:
 
@@ -20,11 +21,11 @@ print(can_harvest()) #druckt "True" oder "False"
 
 print(get_pos_x(), get_pos_y()) #druckt die aktuelle Position`
 
-Die print-Funktion gibt den Wert direkt in die Luft und auf die [Ausgabe](docs/output.md)-Seite aus.
+Die print-Funktion druckt den Wert direkt in die Luft und auf die [Ausgabe](docs/output.md) Seite.
 
-Das Drucken in die Luft kann manchmal etwas langsam sein, wenn Sie viele Werte drucken möchten.
-In diesem Fall können Sie die `quick_print()`-Funktion verwenden, die nur im Ausgabefenster druckt.
+In die Luft zu drucken kann manchmal etwas langsam sein, wenn du viele Werte drucken möchtest.
+In diesem Fall kannst du die `quick_print()` Funktion verwenden, die nur im Ausgabefenster druckt.
 
 Das Ausgabefenster protokolliert auch Warnungen und Fehler, daher kann es nützlich sein, dies zu überprüfen, wenn etwas nicht wie erwartet funktioniert.
 
-Wenn die Ausführung stoppt, wird die Ausgabe auch in die Datei output.txt im Spielordner geschrieben. Sie können den Spielordner finden, indem Sie Menü -> Laden -> Ordner öffnen auswählen.
+Wenn die Ausführung stoppt, wird die Ausgabe auch in die output.txt Datei im Spielordner geschrieben. Du findest den Spielordner, indem du Menü -> Laden -> Ordner öffnen auswählst.

@@ -1,24 +1,24 @@
 # Cactus
-Los cactus pueden cultivarse en el suelo a partir de semillas de cactus.
+Como otras plantas, los [cactus](objects/cactus) pueden cultivarse en suelo y cosecharse como de costumbre.
 
-Tienen un extraño sentido de comunidad.
+Sin embargo, vienen en varios tamaños y tienen un extraño sentido del orden.
 
-Cuando cosechas un cactus, todos los cactus en el campo son cosechados.
-El número de elementos de cactus que se obtienen por cactus es igual al tamaño del mundo, tal como lo devuelve `get_world_size()`.
+Si cosechas un cactus completamente crecido y todos los cactus vecinos están en orden ordenado, también se cosecharán todos los cactus vecinos de forma recursiva.
 
-Un cactus solo deja caer elementos de cactus cuando se cosecha si está en orden.
-Se considera que un cactus está en orden si hay un cactus más pequeño o igual al `South` y al `West` y un cactus más grande o igual al `North` y al `East`.
-Esencialmente, los cactus deben estar ordenados en direcciones crecientes de x e y para que dejen caer algo.
+Un cactus se considera que está en orden ordenado si todos los cactus vecinos al `Norte` y `Este` están completamente crecidos y son mayores o iguales que él, y todos los cactus vecinos al `Sur` y `Oeste` están completamente crecidos y son menores o iguales que él.
 
-Si un cactus está en el borde del campo, solo los campos vecinos existentes necesitan estar correctos para que esté ordenado.
+La cosecha solo se extenderá si todos los cactus adyacentes están completamente crecidos y en orden ordenado.
+Esto significa que si un cuadrado de cactus crecidos está ordenado por tamaño y cosechas un cactus, se cosechará todo el cuadrado.
 
-El tamaño de un cactus se puede medir con `measure()`.
+Recibirás cactus igual al número de cactus cosechados al cuadrado. Así que si cosechas `n` cactus simultáneamente, recibirás `n**2` `Items.Cactus`.
+
+El tamaño de un cactus puede medirse con `measure()`.
 Siempre es uno de estos números: `0,1,2,3,4,5,6,7,8,9`.
 
-También puedes pasar una dirección a `measure(dir)` para medir el tile vecino en esa dirección del dron.
+También puedes pasar una dirección a `measure(direction)` para medir la casilla vecina en esa dirección del dron.
 
 Puedes intercambiar un cactus con su vecino en cualquier dirección usando el comando `swap()`.
-`swap(direction)` intercambia el objeto bajo el dron con el objeto a un tile en la `dirección` del dron.
+`swap(direction)` intercambia el objeto bajo el dron con el objeto una casilla en la `dirección` del dron.
 
 <spoiler=mostrar pista 1>
 Si cada columna y cada fila del campo están ordenadas, entonces todas las plantas están en orden.

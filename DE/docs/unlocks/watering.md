@@ -1,16 +1,14 @@
-# Watering
-Pflanzen wachsen schneller, wenn sie bewässert werden. Der Boden hat einen Wasserstand, der von `0` bis `1` reicht.
+# Bewässerung
+Pflanzen wachsen schneller, wenn sie bewässert werden. Der Boden hat einen Wasserstand von `0` bis `1`.
 Die Funktion `get_water()` gibt den Wasserstand des Bodens zurück, über dem sie sich befindet.
 
-Die Wachstumsgeschwindigkeit einer Pflanze, die auf bearbeitetem Boden wächst, steigt linear von 1x Geschwindigkeit bei Wasserstand 0 auf 5x Geschwindigkeit bei Wasserstand 1.
-Bewässerung beeinflusst nur Pflanzen, die auf bearbeitetem Boden wachsen. Sie hat keine Auswirkungen auf Pflanzen, die auf Rasen wachsen.
+Die Wachstumsgeschwindigkeit einer Pflanze steigt linear von 1-facher Geschwindigkeit bei Wasserstand 0 bis zur 5-fachen Geschwindigkeit bei Wasserstand 1.
 
-Der Boden trocknet mit der Zeit aus: Das Wasser verliert ab und zu 1% seines aktuellen Wasserstands. Den Wasserstand hoch zu halten, verbraucht viel mehr Wasser als ihn niedrig zu halten.
+Der Boden trocknet mit der Zeit aus: Er verliert etwa einmal pro Sekunde 1% seines aktuellen Wasserstands. Die Aufrechterhaltung eines hohen Wasserstands verbraucht viel mehr Wasser als die Aufrechterhaltung eines niedrigen Wasserstands.
 
-Sie können Wassertanks verwenden, um Ihre Pflanzen zu bewässern. Sie können leere Tanks mit Holz kaufen, indem Sie `trade(Items.Empty_Tank)` verwenden.
+Sie können Wassertanks zur Bewässerung Ihrer Pflanzen verwenden. Alle 10 Sekunden wird automatisch ein Wassertank zu Ihrem Inventar hinzugefügt.
+Durch Aufwerten von `Unlocks.Watering` erhalten Sie alle 10 Sekunden einen zusätzlichen Wassertank.
 
-Ein Tank kann `0,25` Wasser halten.
+Ein Tank kann `0.25` Wasser fassen.
 
-Tanks füllen sich automatisch. Die Füllrate beträgt `0,5`% der Anzahl der leeren Tanks pro Sekunde. Wenn Sie also `100` leere Tanks haben, wird einer von ihnen alle `2` Sekunden gefüllt.
-
-Rufen Sie `use_item(Items.Water_Tank)` über jedem Boden auf, um einen Tank zu entleeren und den Boden zu bewässern.
+Rufen Sie `use_item(Items.Water)` über beliebigem Boden auf, um den Boden zu bewässern.

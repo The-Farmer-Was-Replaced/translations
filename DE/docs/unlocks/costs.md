@@ -1,20 +1,22 @@
-# Costs
-Jede Kostenangabe kann als ein Wörterbuch dargestellt werden, das Elemente auf Zahlen abbildet.
+# Kosten
 
-Die Funktion `get_cost()` gibt ein solches Wörterbuch zurück. Sie gibt den Preis an, um einen Artikel mit der Funktion `trade()` zu kaufen, das Saatgut, das benötigt wird, um eine Pflanze zu pflanzen, oder die Kosten für eine Freischaltung.
+Jede Kostenart kann als Wörterbuch dargestellt werden, das Gegenstände auf Zahlen abbildet.
 
-`get_cost(Items.Pumpkin_Seed)`
-gibt `{Items.Carrot:1}` zurück
+Die Funktion `get_cost()` gibt ein solches Wörterbuch zurück. Sie gibt den Saatgutbedarf zum Pflanzen einer Pflanze oder die Kosten eines Freischaltens zurück.
 
 `get_cost(Entities.Pumpkin)`
-gibt `{Items.Pumpkin_Seed:1}` zurück
 
-`get_cost(Unlocks.Loops)`
+gibt `{Items.Carrot:1}` zurück
+
+Für Freischaltungen kann ein optionales zweites Argument übergeben werden, um die Kosten für das gewünschte Freischaltlevel zu erhalten. Standardmäßig ist es das aktuelle Freischaltlevel.
+
+`get_cost(Unlocks.Loops, 0)`
+
 gibt `{Items.Hay:5}` zurück
 
-Für Upgrades, die bereits das maximale Level erreicht haben, gibt `get_cost()` `None` zurück.
+Für Freischaltungen, die bereits das maximale Level erreicht haben, gibt `get_cost()` `None` zurück.
 
-Es kann so verwendet werden:
+Es kann wie folgt verwendet werden:
 `cost = get_cost(something)
 for item in cost:
 	amount_of_this_item_needed = cost[item]`

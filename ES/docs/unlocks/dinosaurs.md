@@ -1,23 +1,42 @@
-# Dinosaurs
-Los dinosaurios son criaturas antiguas y majestuosas que se pueden cultivar para obtener huesos antiguos.
+# Dinosaurios
+Los dinosaurios son criaturas antiguas y majestuosas que se pueden criar para obtener huesos antiguos.
 
-Para obtener dinosaurios, debes intercambiar huevos y usarlos con `use_item(Items.Egg)`.
+Desafortunadamente, los dinosaurios se extinguieron hace mucho tiempo, por lo que lo mejor que podemos hacer ahora es disfrazarnos de uno.
+Para este propósito, has recibido el nuevo sombrero de dinosaurio.
 
-A los dinosaurios les gusta moverse. De vez en cuando, el dinosaurio se intercambiará con un vecino aleatorio.
-East intercambio funciona igual que llamar a `swap(direction)` manualmente, excepto que ocurre aleatoriamente de vez en cuando.
+El sombrero se puede equipar con
+`change_hat(Hats.Dinosaur_Hat)`
 
-Los dinosaurios se pueden cosechar para obtener huesos usando el comando `harvest()`.
-Hay 4 tipos diferentes de dinosaurios.
-Cosechar un dinosaurio también cosechará todos los dinosaurios adyacentes del mismo tipo, por lo que se cosechará todo un grupo conectado de dinosaurios a la vez.
+Desafortunadamente, no se ve igual que en el anuncio...
 
-El tipo de un dinosaurio se puede medir con `measure()`. Esto devolverá un número único para cada tipo de dinosaurio.
+Si equipas el sombrero de dinosaurio y tienes suficientes calabazas, se comprará automáticamente una [manzana](objects/apple) y se colocará debajo del dron.
+Cada vez que te alejas de una manzana, la cola del sombrero de dinosaurio crecerá un bloque y, si tienes suficientes objetos, se comprará y colocará una nueva manzana en un lugar aleatorio.
+La manzana no puede aparecer si ya hay algo plantado donde quiere estar.
 
-Recuerda que también puedes pasar una dirección a measure para medir una entidad junto al dron.
-`measure(North)`, por ejemplo, medirá la entidad al norte del dron.
+La cola del dinosaurio será arrastrada detrás del dron llenando los bloques anteriores por los que el dron se ha movido. Si un dron intenta moverse sobre la cola, `move()` fallará y devolverá `False`.
+El último segmento de la cola se moverá para despejar el camino durante el movimiento, así que puedes moverte sobre él. Sin embargo, si la serpiente llena todo el campo, ya no podrás moverte. Así que puedes comprobar si la serpiente está totalmente crecida verificando si no puedes moverte.
 
-La cantidad de huesos que obtienes depende del tamaño del grupo de dinosaurios que cosechas. Cosechar grupos de hasta 4 dejará caer huesos iguales al cuadrado del tamaño del grupo. Los grupos de tamaño 4 o más grandes dejarán caer huesos iguales a 4 veces el tamaño del grupo.
+Usar `measure()` en una manzana devolverá la posición de la siguiente manzana como una tupla.
 
-Por lo tanto, la cantidad de huesos por dinosaurio aumenta con el tamaño del grupo hasta el tamaño 4, y luego permanece constante.
-Para una eficiencia óptima, siempre querrás cosechar grupos de tamaño 4 o más grandes.
+`next_x, next_y = measure()`
 
-Los grupos también se envuelven alrededor del lado de la granja. Así que un dinosaurio en el borde de la granja se considera adyacente a un dinosaurio en el otro lado de la granja.
+Cuando el sombrero se desequipa nuevamente al equipar otro sombrero, la cola será cosechada.
+Recibirás huesos iguales al cuadrado de la longitud de la cola. Así que para una cola de longitud `n` recibirás `n**2` `Items.Bone`.
+Por ejemplo:
+longitud 1 => 1 hueso
+longitud 2 => 4 huesos
+longitud 3 => 9 huesos
+longitud 4 => 16 huesos
+longitud 16 => 256 huesos
+longitud 100 => 10000 huesos
+
+El Sombrero de Dinosaurio es muy pesado, por lo que si lo equipas, `move()` tardará 800 ticks en lugar de 200. Sin embargo, cada vez que recoges una manzana, el número de ticks usados por `move()` se reduce en un 3% (redondeado hacia abajo), porque una cola más larga puede ayudarte a moverte.
+
+El siguiente bucle imprime el número de ticks usados por `move()` después de cualquier cantidad de manzanas:
+
+`ticks = 800
+for i in range(100):
+    print("ticks after ", i, " apples: ", ticks)
+    ticks -= ticks * 0.03 // 1`
+
+<spoiler=mostrar pista 1>Si sigues moviéndote por el mismo camino que cubre todo el campo, puedes obtener fácilmente una serpiente de campo completa cada vez, porque cubrirás cada lugar libre antes de volver a donde está tu cola. No es muy eficiente, pero funciona.</spoiler>

@@ -1,23 +1,23 @@
-# First Program
+# Erstes Programm
 ## Texteditor
-Alle Programmierungen werden in Code-Fenstern durchgeführt. Jedes Code-Fenster entspricht einer Textdatei, die Code enthält.
-Sie können die Datei umbenennen, indem Sie auf den Namen des Fensters klicken.
+Alle Programmierung erfolgt in Code-Fenstern. Jedes Code-Fenster entspricht einer Textdatei, die Code enthält.
+Sie können die Datei umbenennen, indem Sie auf ihren Namen oben im Fenster klicken.
 
-Der Code kann wie in jedem Texteditor bearbeitet werden, solange er nicht ausgeführt wird.
-Sie können das Programm direkt ausführen, indem Sie im Code-Fenster auf die grüne Wiedergabetaste drücken.
+Der Code kann bearbeitet werden wie in jedem Texteditor, solange er nicht läuft.
+Sie können das Programm direkt ausführen, indem Sie den grünen Wiedergabe-Button im Code-Fenster drücken.
 ![](PlayButton50)
 
-Sie können weitere Code-Dateien mit der "+"-Schaltfläche in der oberen rechten Ecke des Bildschirms erstellen.
+Sie können weitere Code-Dateien mit der "+"-Taste in der oberen rechten Ecke des Bildschirms erstellen.
 Sie können ein Fenster an ein anderes andocken, indem Sie es darauf ziehen.
 
-Sie werden feststellen, dass ein einfaches Code-Vervollständigungsfenster erscheint, sobald Sie zu tippen beginnen.
+Sie werden feststellen, dass ein einfaches Code-Vervollständigungsfenster erscheint, sobald Sie mit dem Tippen beginnen.
 Drücken Sie Tab, um die Code-Vervollständigung einzufügen.
 Verwenden Sie die Pfeiltasten, um durch die Vervollständigungsoptionen zu navigieren.
 
 Keine Sorge, wenn dies Ihr erstes Mal Programmieren ist. Die Sprache wird Schritt für Schritt freigeschaltet, sodass Sie nicht von all den Dingen überwältigt werden, die Sie tun können.
-Die Syntax ist auch der von Python ähnlich, einer der am weitesten verbreiteten Programmiersprachen der Welt, sodass das Lernen nicht völlig umsonst ist.
+Die Syntax ähnelt auch der von Python, einer der weltweit am häufigsten verwendeten Programmiersprachen, sodass das Lernen nicht völlig verschwendet ist.
 
-Wenn Sie bereits Python kennen, ist das auch kein Problem, Sie können das frühe Spiel schnell überspringen, um zu den interessanteren Dingen zu gelangen.
+Wenn Sie bereits Python kennen, ist das auch kein Problem. Sie können einfach das frühe Spiel schnell überspringen, um zu den interessanteren Dingen zu gelangen.
 
 Code ist eine Abfolge von Anweisungen, die Zeile für Zeile ausgeführt werden.
 
@@ -29,9 +29,9 @@ und
 
 `do_a_flip()`
 
-Dies sind Funktionsaufrufe. Eine Funktion ist im Wesentlichen ein Stück Funktionalität, das ausgeführt werden kann. Sie führen es mit den `()` Klammern aus.
+Dies sind Funktionsaufrufe. Eine Funktion ist im Wesentlichen ein Stück Funktionalität, das ausgeführt werden kann. Sie führen sie mithilfe der `()` Klammern aus.
 
-Versuchen Sie, diese Anweisungen in das Code-Fenster einzugeben und die Ausführen-Schaltfläche zu drücken.
+Versuchen Sie, diese Anweisungen im Code-Fenster einzugeben und den Ausführen-Button zu drücken.
 
 ## Freischaltungen
-Das Sammeln von Gras gibt Ihnen Heu. Heu kann im Freischaltmenü verwendet werden, um Schleifen freizuschalten. Öffnen Sie das Freischaltmenü mit der Schaltfläche in der oberen rechten Ecke.
+Das Sammeln von Gras gibt Ihnen Heu. Heu kann verwendet werden, um Schleifen im Freischaltungsmenü freizuschalten. Öffnen Sie das Freischaltungsmenü mit dem Button in der oberen rechten Ecke.

@@ -1,23 +1,44 @@
-# Dinosaurs
-Dinosaurier sind alte, majestätische Kreaturen, die für antike Knochen gezüchtet werden können.
+# Dinosaurier
+Dinosaurier sind uralte, majestätische Kreaturen, die für alte Knochen gezüchtet werden können.
 
-Um Dinosaurier zu bekommen, musst du Eier tauschen und sie mit `use_item(Items.Egg)` verwenden.
+Leider sind Dinosaurier vor langer Zeit ausgestorben, sodass wir sie jetzt nur noch verkleiden können.
+Zu diesem Zweck hast du den neuen Dinosaurierhut erhalten.
 
-Dinosaurier bewegen sich gerne. Von Zeit zu Zeit wird der Dinosaurier mit einem zufälligen Nachbarn tauschen.
-Dieser Tausch funktioniert genauso wie das manuelle Aufrufen von `swap(direction)`, außer dass es zufällig von Zeit zu Zeit passiert.
+Der Hut kann mit
+`change_hat(Hats.Dinosaur_Hat)`
 
-Dinosaurier können mit dem Befehl `harvest()` für Knochen geerntet werden.
-Es gibt 4 verschiedene Arten von Dinosauriern.
-Das Ernten eines Dinosauriers wird auch alle angrenzenden Dinosaurier derselben Art ernten, sodass eine gesamte verbundene Gruppe von Dinosauriern auf einmal geerntet wird.
+ausgerüstet werden.
 
-Die Art eines Dinosauriers kann mit `measure()` gemessen werden. Dies wird eine eindeutige Nummer für jede Art von Dinosaurier zurückgeben.
+Leider sieht er auf der Werbung nicht ganz so aus...
 
-Denke daran, dass du auch eine Richtung in measure übergeben kannst, um ein Wesen neben der Drohne zu messen.
-`measure(North)` zum Beispiel wird das Wesen nördlich der Drohne messen.
+Wenn du den Dinosaurierhut ausrüstest und genügend Kürbisse hast, wird automatisch ein [Apfel](objects/apple) gekauft und unter der Drohne platziert.
+Jedes Mal, wenn du dich von einem Apfel entfernst, wächst der Schwanz des Dinosaurierhuts um ein Feld und, falls du genügend Gegenstände hast, wird ein neuer Apfel an einem zufälligen Ort gekauft und platziert.
+Der Apfel kann nicht spawnen, wenn dort bereits etwas gepflanzt ist.
 
-Die Anzahl der Knochen, die du erhältst, hängt von der Größe der Gruppe der Dinosaurier ab, die du erntest. Das Ernten von Gruppen bis zu 4 wird Knochen in Höhe des Quadrats der Gruppengröße fallen lassen. Gruppen der Größe 4 oder größer lassen Knochen in Höhe des 4-fachen der Gruppengröße fallen.
+Der Schwanz des Dinosauriers wird hinter der Drohne hergezogen und füllt die vorherigen Felder, über die die Drohne bewegt wurde. Wenn eine Drohne versucht, auf den Schwanz zu bewegen, schlägt `move()` fehl und gibt `False` zurück.
+Das letzte Segment des Schwanzes bewegt sich während der Bewegung aus dem Weg, sodass du dich darauf bewegen kannst. Wenn die Schlange jedoch das ganze Feld ausfüllt, kannst du dich nicht mehr bewegen. Du kannst überprüfen, ob die Schlange vollständig gewachsen ist, indem du prüfst, ob du dich nicht mehr bewegen kannst.
 
-Daher steigt die Anzahl der Knochen pro Dinosaurier mit der Gruppengröße bis zu einer Größe von 4 und bleibt dann konstant.
-Für optimale Effizienz möchtest du immer Gruppen der Größe 4 oder größer ernten.
+Die Verwendung von `measure()` auf einem Apfel gibt die Position des nächsten Apfels als Tupel zurück.
 
-Gruppen wickeln sich auch um die Seite der Farm. Ein Dinosaurier am Rand der Farm wird als angrenzend an einen Dinosaurier auf der anderen Seite der Farm betrachtet.
+`next_x, next_y = measure()`
+
+Wenn der Hut wieder ausgerüstet wird, indem ein anderer Hut ausgerüstet wird, wird der Schwanz geerntet.
+Du erhältst Knochen, die dem Quadrat der Schwanzlänge entsprechen. Für einen Schwanz der Länge `n` erhältst du `n**2` `Items.Bone`.
+Zum Beispiel:
+Länge 1 => 1 Knochen
+Länge 2 => 4 Knochen
+Länge 3 => 9 Knochen
+Länge 4 => 16 Knochen
+Länge 16 => 256 Knochen
+Länge 100 => 10000 Knochen
+
+Der Dinosaurierhut ist sehr schwer, sodass `move()` 800 Ticks statt 200 benötigt, wenn er ausgerüstet ist. Allerdings wird die Anzahl der Ticks, die für `move()` verwendet werden, jedes Mal um 3% (abgerundet) reduziert, wenn du einen Apfel aufnimmst, weil ein längerer Schwanz dir beim Bewegen helfen kann.
+
+Die folgende Schleife druckt die Anzahl der Ticks, die von `move()` nach einer beliebigen Anzahl von Äpfeln verwendet werden:
+
+`ticks = 800
+for i in range(100):
+    print("ticks after ", i, " apples: ", ticks)
+    ticks -= ticks * 0.03 // 1`
+
+<spoiler=zeige Hinweis 1>Wenn du dich immer auf demselben Pfad bewegst, der das ganze Feld abdeckt, kannst du jedes Mal leicht eine vollständig gefüllte Feldschlange erhalten, weil du jeden freien Platz abdeckst, bevor du zu deinem Schwanz zurückkehrst. Es ist nicht sehr effizient, aber es funktioniert.</spoiler>

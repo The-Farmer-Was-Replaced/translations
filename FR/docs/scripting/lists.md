@@ -1,17 +1,18 @@
 # Listes
-
-Les listes sont un moyen facile de stocker plusieurs valeurs dans une seule variable. Vous pouvez créer de nouvelles listes comme ceci :
+Les listes sont un moyen facile de stocker plusieurs valeurs dans une seule variable.
+Vous pouvez créer de nouvelles listes comme ceci :
 
 `list = [2, True, Items.Hay]`
 
-La liste contient maintenant les valeurs `2`, `True` et `Items.Hay`. Une liste peut également être vide :
+La liste contient maintenant les valeurs `2`, `True` et `Items.Hay`.
+Une liste peut également être vide :
 
 `empty_list = []`
 
 Vous pouvez accéder à un élément d'une liste par son index. L'index est `0` pour le premier élément, `1` pour le deuxième élément, `2` pour le troisième...
 
-plantes carottes
-`list = [Entities.Tree, Entities.Carrots, Entities.Pumpkin]
+planter des carottes
+`list = [Entities.Tree, Entities.Carrot, Entities.Pumpkin]
 plant(list[1])`
 
 Vous pouvez itérer sur une liste en utilisant une boucle for. L'exemple suivant additionne tous les éléments de la liste.
@@ -19,10 +20,10 @@ Vous pouvez itérer sur une liste en utilisant une boucle for. L'exemple suivant
 `list = [4, 7, 2, 5]
 sum = 0
 for number in list:
- sum += number`
+    sum += number`
 `sum` est maintenant `18`
 
-Les méthodes de liste suivantes vous permettent d'ajouter et de supprimer des éléments :
+Les méthodes suivantes des listes permettent d'ajouter et de supprimer des éléments :
 
 `list.append(elem)` ajoute un élément à la fin de la liste :
 
@@ -42,7 +43,8 @@ list.remove(2)`
 list.insert(1, Items.Wood)`
 `list` est maintenant `[Entities.Tree, Items.Wood, Items.Hay]`
 
-`list.pop(index)` supprime l'élément à l'index spécifié. Si aucun index n'est spécifié, le dernier élément est supprimé.
+`list.pop(index)` supprime l'élément à l'index spécifié.
+Si aucun index n'est spécifié, le dernier élément est supprimé.
 
 `list = [3, 5, 8, 25]
 list.pop()`
@@ -50,14 +52,15 @@ list.pop()`
 `list.pop(1)`
 `list` est maintenant `[3, 8]`
 
-La fonction `len()` renvoie la longueur de la liste.
+La fonction `len()` retourne la longueur de la liste.
 `list = [3, 2, 1]
 x = len(list)`
 `x` est maintenant `3`
 
-Les listes ont des sémantiques de référence. Cela signifie qu'assigner une liste à une variable assigne le même objet liste à cette variable, plutôt que de faire une copie de la liste. Si deux variables font référence à la même liste, les modifications apportées à la liste seront visibles par les deux.
+Les listes ont une sémantique de référence. Cela signifie qu'assigner une liste à une variable assigne le même objet liste à cette variable, plutôt que de faire une copie de la liste.
+Si deux variables référencent la même liste, les changements apportés à la liste seront vus par les deux.
 
 `a = [1,2]
 b = a
 b.pop()`
-`a` et `b` sont maintenant tous deux `[1]`
+`a` et `b` sont maintenant toutes les deux `[1]`

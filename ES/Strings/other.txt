@@ -1,3 +1,6 @@
-@word_number = número
-@word_direction = dirección
-@run_cancelled = Carrera Abortada
+@word_number = Número
+@word_direction = Dirección
+@run_cancelled = Ejecución fallida
+@average_text = {0} completado ({2:F1}%)
+{1}
+@unlocked_in = Desbloqueado en: [{0}]({1})

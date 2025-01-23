@@ -1,7 +1,7 @@
-# Multi-Échange
+# Échange Multiple
 
-Acheter des articles un par un prend beaucoup de temps. Vous pouvez maintenant spécifier le nombre d'articles que vous souhaitez échanger dans un second argument.
+Acheter des objets un par un prend beaucoup de temps. Vous pouvez maintenant spécifier le nombre d’objets que vous souhaitez échanger dans un deuxième argument.
 
 Par exemple, si vous voulez acheter 5 graines de carotte, vous pouvez écrire
 `trade(Items.Carrot_Seed, 5)`
-Si vous ne pouvez pas vous permettre d'en acheter autant, cela ne fera simplement rien au lieu d'en acheter moins.
+Si vous ne pouvez pas vous en permettre autant, cela ne fera tout simplement rien au lieu d’en acheter moins.

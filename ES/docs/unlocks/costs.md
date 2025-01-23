@@ -1,18 +1,20 @@
-# Costs
+# Costos
+
 Cualquier costo puede representarse como un diccionario que asigna elementos a números.
 
-La función `get_cost()` devuelve dicho diccionario. Devuelve el precio para comprar un artículo usando la función `trade()`, la semilla requerida para plantar una planta, o el costo de un desbloqueo.
-
-`get_cost(Items.Pumpkin_Seed)`
-devuelve `{Items.Carrot:1}`
+La función `get_cost()` devuelve dicho diccionario. Devuelve la semilla necesaria para plantar una planta o el costo de una desbloqueo.
 
 `get_cost(Entities.Pumpkin)`
-devuelve `{Items.Pumpkin_Seed:1}`
 
-`get_cost(Unlocks.Loops)`
+devuelve `{Items.Carrot:1}`
+
+Para desbloqueos, se puede pasar un segundo argumento opcional para el nivel de desbloqueo del que deseas obtener el costo. Por defecto, es el nivel de desbloqueo actual.
+
+`get_cost(Unlocks.Loops, 0)`
+
 devuelve `{Items.Hay:5}`
 
-Para las mejoras que ya están al nivel máximo, `get_cost()` devolverá `None`.
+Para desbloqueos que ya están en el nivel máximo, `get_cost()` devolverá `None`.
 
 Se puede usar así:
 `cost = get_cost(something)

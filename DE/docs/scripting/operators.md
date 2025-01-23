@@ -1,17 +1,17 @@
-# Operators
+# Operatoren
 arithmetische Operatoren: `+, -, *, /, //, %, **`
-Vergleichsoperatoren: `==, !=, <=, >=, <, >`
-logische Operatoren: `not, and, or`
+vergleichende Operatoren: `==, !=, <=, >=, <, >`
+boolesche Operatoren: `not, and, or`
 
 Hinweis: Alle Zahlen im Spiel sind Gleitkommazahlen. Daher sind alle arithmetischen Operatoren Gleitkommaoperatoren.
 `//` ist definiert, um die Zahl nach der Division einfach abzurunden.
 
-Für Zuweisungsoperatoren müssen Sie die "Variablen"-Freischaltung freischalten.
+Für Zuordnungsoperatoren musst du das "Variablen"-Unlock freischalten.
 
 ## Einführung
-Operatoren ermöglichen es Ihnen, Werte zu vergleichen, zu modifizieren und zu kombinieren.
+Operatoren ermöglichen es dir, Werte zu vergleichen, zu modifizieren und zu kombinieren.
 Die arithmetischen Operatoren `+, -, *, /, //, %, **` werden verwendet, um gängige mathematische Operationen an Zahlen durchzuführen.
-Die Vergleichsoperatoren `==, !=, <=, >=, <, >` werden verwendet, um Werte zu vergleichen. Das Ergebnis ist immer entweder `True` oder `False`.
+Die vergleichenden Operatoren `==, !=, <=, >=, <, >` werden verwendet, um Werte zu vergleichen. Das Ergebnis ist immer entweder `True` oder `False`.
 Die logischen Operatoren (auch boolesche Operatoren genannt) `not, and, or` werden verwendet, um Wahrheitswerte zu kombinieren.
 
 ## Arithmetische Operatoren
@@ -25,11 +25,11 @@ Die logischen Operatoren (auch boolesche Operatoren genannt) `not, and, or` werd
 `2 * 3` ergibt `6`
 `5 / 2` ergibt `2.5`
 
-`//` macht dasselbe wie `/`, aber das Ergebnis wird abgerundet (auf die nächste ganze Zahl abgerundet).
+`//` macht dasselbe wie `/`, aber das Ergebnis wird abgerundet (auf die nächste ganze Zahl nach unten).
 
 `5 // 2` ergibt `2`
 
-`%` ist der Modulo-Operator, auch bekannt als Restoperator. Er teilt im Wesentlichen die beiden Zahlen und gibt dann den Rest zurück. Sie können auch daran denken, dass die rechte Zahl wiederholt von der linken Zahl subtrahiert wird, bis der Rest kleiner als die rechte Zahl ist.
+`%` ist der Modulo-Operator, auch bekannt als Restoperator. Er teilt im Wesentlichen die beiden Zahlen und gibt dann den Rest zurück. Man kann es sich auch vorstellen, dass die rechte Zahl wiederholt von der linken Zahl subtrahiert wird, bis der Rest kleiner als die rechte Zahl ist.
 
 `4 % 2` ergibt `0`
 `5 % 2` ergibt `1`
@@ -42,27 +42,27 @@ Die logischen Operatoren (auch boolesche Operatoren genannt) `not, and, or` werd
 `2**2` ergibt `4`
 `(-5)**3` ergibt `-125`
 
-## Vergleichsoperatoren
-`==` und `!=` werden verwendet, um zu überprüfen, ob zwei Werte "gleich"(`==`) oder "ungleich"(`!=`) sind. Sie können für alle Arten von Werten verwendet werden.
+## Vergleichende Operatoren
+`==` und `!=` werden verwendet, um zu prüfen, ob zwei Werte "gleich" (`==`) oder "nicht gleich" (`!=`) sind. Sie können für alle Arten von Werten verwendet werden.
 
 `2 == 2` ergibt `True`
 `Entities.Bush != Entities.Bush` ergibt `False`
 `3 != 3 + 1` ergibt `True`
 
-`<=, >=, <, >` können nur bei Zahlen verwendet werden. Sie überprüfen, ob die linke Zahl "kleiner oder gleich"(`<=`), "größer oder gleich"(`>=`), "kleiner" (`<`) oder "größer" (`>`) als die rechte Zahl ist.
+`<=, >=, <, >` können nur für Zahlen verwendet werden. Sie prüfen, ob die linke Zahl "kleiner oder gleich" (`<=`), "größer oder gleich" (`>=`), "kleiner" (`<`) oder "größer" (`>`) als die rechte Zahl ist.
 
 `1 <= 1` ergibt `True`
 `2 >= 3` ergibt `False`
 `-2 < -1` ergibt `True`
 `6 > 6` ergibt `False`
 
-## Logische Operatoren
-`not` invertiert einfach den Wert:
+## Boolesche Operatoren
+`not` kehrt einfach den Wert um:
 
 `not False` ergibt `True`
 `not True` ergibt `False`
 
-`and` ergibt nur dann `True`, wenn beide Werte `True` sind
+`and` ergibt `True` nur wenn beide Werte `True` sind
 
 `True and True` ergibt `True`
 `True and False` ergibt `False`

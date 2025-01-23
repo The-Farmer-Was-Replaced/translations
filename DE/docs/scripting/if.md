@@ -1,47 +1,46 @@
-# If
+# Wenn
 Du kannst `if`, `elif` und `else` verwenden, um Code bedingt auszuführen.
 
-`if bedingung1:
-	mach_einen_salto()
-elif bedingung2:
-	ernte()
+`if condition1:
+	do_a_flip()
+elif condition2:
+	harvest()
 else:
-	mach_einen_salto()
-	ernte()`
+	do_a_flip()
+	harvest()`
 
 ## Syntax
-`if` ermöglicht es dir, Code nur dann auszuführen, wenn eine Bedingung `True` ist. Sie sind wie eine `while`-Schleife, die nicht schleift.
-Das `if` nimmt eine Bedingung genau wie die `while`-Schleife und führt den `if`-Codeblock aus, wenn die Bedingung als `True` bewertet wird:
+`if`-Anweisungen ermöglichen es dir, Code nur auszuführen, wenn eine Bedingung `True` ist. Sie sind wie eine `while`-Schleife, die jedoch nicht wiederholt wird.
+Das `if` nimmt eine Bedingung wie die `while`-Schleife und führt den if-Codeblock aus, wenn die Bedingung `True` ergibt:
 
-`#mach einen Salto, wenn die Bedingung wahr ist
-if bedingung:
-	mach_einen_salto()`
+`#Führe einen Flip aus, wenn die Bedingung wahr ist
+if condition:
+	do_a_flip()`
 
-Du kannst auch ein `else` nach dem `if` hinzufügen, das den Code definiert, der ausgeführt wird, wenn die Bedingung als `False` bewertet wird:
+Du kannst auch ein `else` nach dem if hinzufügen, das definierten Code ausführt, wenn die Bedingung `False` ist:
 
-`if bedingung:
-	#mach einen Salto, wenn die Bedingung wahr ist
-	mach_einen_salto()
+`if condition:
+	#führe einen Flip aus, wenn die Bedingung wahr ist
+	do_a_flip()
 else:
-	#ansonsten ernte
-	ernte()`
+	#ansonsten ernten
+	harvest()`
 
-`elif` ist die Abkürzung für else if.
+`elif` ist kurz für else if.
 
-`if bedingung1:
+`if condition1:
 	#a
 else:
-	if bedingung2:
+	if condition2:
 		#b
 	else:
 		#c`
 
 kann verkürzt werden zu:
 
-`if bedingung1:
+`if condition1:
 	#a
-elif bedingung2:
+elif condition2:
 	#b
 else:
 	#c`
-

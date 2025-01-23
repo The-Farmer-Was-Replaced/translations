@@ -1,10 +1,10 @@
-# While Loop
-Du hast die `while`-Schleife und die Werte `True` und `False` freigeschaltet. Die `while`-Schleife führt den Schleifenkörper so lange aus, wie die Bedingung `True` ist.
+# While-Schleife
+Du hast die `while`-Schleife sowie die Werte `True` und `False` freigeschaltet. Die `while`-Schleife führt den Schleifenrumpf so lange aus, wie die Bedingung `True` ist.
 
-`while Bedingung:
-	#Schleifenkörper`
+`while condition:
+	#loop body`
 
-Mach dir keine Sorgen über das Erstellen von Endlosschleifen. Die Verzögerungen in der Ausführung verhindern, dass das Programm einfriert.
+Mach dir keine Sorgen über endlose Schleifen. Die Verzögerungen bei der Ausführung verhindern, dass das Programm einfriert.
 
 ## Für Anfänger
 Vielleicht hast du bereits versucht, mehrere `harvest()`-Aufrufe hintereinander zu setzen:
@@ -13,27 +13,27 @@ Vielleicht hast du bereits versucht, mehrere `harvest()`-Aufrufe hintereinander 
 harvest()
 harvest()`
 
-Dies ermöglicht es dir, mehrmals in einem Programmdurchlauf zu ernten.
-Es wäre jedoch schön, mehr als dreimal zu ernten, und es ist schlechte Praxis, denselben Code mehrfach zu schreiben.
+Dies ermöglicht es dir, mehrere Male in einem Programmlauf zu ernten.
+Es wäre jedoch schön, mehr als dreimal zu ernten, und denselben Code mehrfach zu schreiben ist schlechte Praxis.
 Die Lösung ist eine Schleife.
-Eine Schleife ermöglicht es dir, denselben Code mehrfach auszuführen.
+Eine Schleife erlaubt es dir, denselben Code mehrfach auszuführen.
 
-Die while-Schleife nimmt eine Bedingung, die ein logischer Wert ist, der nur in einem von zwei Zuständen sein kann: `True` oder `False`.
-Ein solcher Wert wird als boolescher Wert bezeichnet.
+Die while-Schleife nimmt eine Bedingung, die ein logischer Wert ist und nur in einem von zwei Zuständen sein kann: `True` oder `False`.
+Ein solcher Wert wird als Boolescher Wert bezeichnet.
 
-Die Schleife führt dann den Code innerhalb der Schleife aus, bis die Bedingung `False` ist.
+Die Schleife führt dann den Code innerhalb der Schleife aus, bis die Bedingung False ist.
 Die while-Schleife sieht so aus:
 
-`while Bedingung:
-	#Schleifenkörper
-	#Schleifenkörper
+`while condition:
+	#loop body
+	#loop body
 	#...`
 
-Dabei musst du "Bedingung" durch einen booleschen Wert ersetzen und `#Schleifenkörper` durch das, was du in der Schleife tun möchtest.
+Dabei musst du "condition" durch einen Booleschen Wert ersetzen und `#loop body` durch das, was du in der Schleife machen möchtest.
 
-Es gibt zwei konstante boolesche Werte. Konstanten sind Werte, die sich während des Programms nicht ändern.
+Es gibt zwei konstante boolesche Werte verfügbar. Konstanten sind Werte, die sich während des Programms nie ändern.
 
-Um einen konstanten booleschen Wert zu erstellen, der immer `True` ist, kannst du einfach `True` schreiben. Schreibe `False` als konstanten booleschen Wert, der immer `False` sein wird.
+Um einen konstanten booleschen Wert zu erstellen, der immer `True` ist, kannst du einfach `True` schreiben. Schreibe `False` als konstanten booleschen Wert, der immer `False` ist.
 Du könntest also entweder schreiben
 
 `while False:
@@ -44,12 +44,12 @@ oder
 `while True:
 	do_a_flip()`
 
-Das erste wird niemals einen Flip machen und das zweite wird für immer Flips machen (eine Endlosschleife).
+Die erste führt niemals einen Flip aus und die zweite führt Flips für immer aus (eine endlose Schleife).
 
-Normalerweise ist es eine schlechte Idee, eine Endlosschleife zu erstellen, da sie das Programm einfrieren lässt, aber in diesem Spiel gibt es Verzögerungen zwischen jeder Iteration der Schleife, sodass die Drohne weiterhin Flips macht, bis du sie manuell stoppst, indem du erneut die Ausführen-Taste drückst.
+Normalerweise ist das Erstellen einer endlosen Schleife eine schlechte Idee, weil es das Programm einfrieren lässt, aber in diesem Spiel gibt es Verzögerungen zwischen jeder Iteration der Schleife, sodass die Drohne weiterhin einen Flip ausführt, bis du sie manuell stoppst, indem du die Ausführungsschaltfläche erneut drückst.
 
-Beachte, wie die Zeile nach dem Doppelpunkt eingerückt ist. Eine solche Einrückung wird verwendet, um Codeblöcke zu trennen.
-Drücke einfach Tab, um eine Einrückung hinzuzufügen, und Shift + Tab (oder Backspace), um sie zu entfernen.
+Beachte, wie die Zeile nach dem Doppelpunkt eingerückt ist. Solche Einrückungen werden verwendet, um Codeblöcke zu trennen.
+Drücke einfach Tab, um die Einrückung hinzuzufügen, und Shift + Tab (oder Backspace), um sie zu entfernen.
 
-Die Schleife wird alle eingerückten Anweisungen nach dem Doppelpunkt wiederholen.
-Anweisungen nach dem eingerückten Block werden ausgeführt, nachdem die Schleife beendet ist.
+Die Schleife wiederholt alle eingerückten Anweisungen nach dem Doppelpunkt.
+Anweisungen nach dem eingerückten Block werden ausgeführt, nachdem die Schleife beendet wurde.

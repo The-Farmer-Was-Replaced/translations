@@ -1,3 +1,6 @@
-@word_number = Nummer
+@word_number = Zahl
 @word_direction = Richtung
-@run_cancelled = Lauf Abgebrochen
+@run_cancelled = Lauf fehlgeschlagen
+@average_text = {0} abgeschlossen ({2:F1}%)
+{1}
+@unlocked_in = Freigeschaltet in: [{0}]({1})

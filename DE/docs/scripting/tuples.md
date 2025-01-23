@@ -1,6 +1,6 @@
-# Tuples
-Tupel sind eine großartige Möglichkeit, mehrere Werte zu einem einzigen Wert zu kombinieren.
-Um ein Tupel zu erstellen, trennen Sie einfach die Werte mit Kommas:
+# Tupel
+Tupel sind eine großartige Möglichkeit, mehrere Werte in einem einzigen Wert zu kombinieren.
+Um ein Tupel zu erstellen, trennen Sie die Werte einfach durch Kommas:
 
 `tuple = 1, 2`
 
@@ -8,7 +8,7 @@ Sie können sie auch wieder in mehrere Variablen entpacken. Im folgenden Code wi
 
 `a, b = 1, 2`
 
-Tupel können wie Listen indiziert werden, aber sie sind unveränderlich und können nach der Erstellung nicht geändert werden.
+Tupel können wie Listen indexiert werden, sind jedoch unveränderlich und können nach der Erstellung nicht geändert werden.
 
 `tuple = 1, 2`
 
@@ -16,14 +16,16 @@ Tupel können wie Listen indiziert werden, aber sie sind unveränderlich und kö
 druckt `2`
 
 `tuple[0] = 3`
-wirft einen Fehler
+löst einen Fehler aus
+
 <unlock=dicts>
-Im Gegensatz zu Listen können Tupel als Schlüssel in Wörterbüchern verwendet werden.
+Im Gegensatz zu Listen können Tupel als Schlüssel in Dictionaries verwendet werden.
 
 `d = {(1,2):(4,5)}
 
 print(d[(1,2)])`
-druckt `(4,5)`</unlock>
+druckt `(4,5)`
+</unlock>
 
 Sie können auch nützlich sein, um mehrere Werte in einer Funktion zurückzugeben.
 

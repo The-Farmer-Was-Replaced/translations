@@ -1,0 +1,11 @@
+
+@lb_descr_fastest_reset = Das gesamte Spiel vollständig automatisieren.
+@lb_descr_maze = 300000 Gold farmen.
+@lb_descr_dinosaur = 98010 Knochen farmen.
+@lb_descr_cactus = 100000 Kakteen farmen.
+@lb_descr_sunflowers = 100000 Energie farmen.
+@lb_descr_pumpkins = 100000 Kürbisse farmen.
+@lb_descr_hay = 100000 Heu farmen.
+@lb_descr_wood = 100000 Holz farmen.
+@lb_descr_carrots = 100000 Karotten farmen.
+@lb_descr_polyculture = 100000 Heu, Holz und Karotten farmen.

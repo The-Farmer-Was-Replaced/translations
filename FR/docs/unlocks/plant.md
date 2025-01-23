@@ -9,3 +9,5 @@ Vous pouvez passer le type de plante que vous souhaitez planter à la fonction c
 Cela plantera un buisson sous le drone.
 
 Appelez `clear()` pour réinitialiser la ferme à toute herbe et réinitialiser la position du drone.
+
+Il semble que si vous cultivez plus d’un type de plante à la fois dans la ferme, vous puissiez parfois obtenir un rendement plus élevé. Vous devrez étudier la polyculture pour en savoir plus.

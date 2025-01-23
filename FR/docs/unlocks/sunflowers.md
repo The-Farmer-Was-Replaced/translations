@@ -1,19 +1,22 @@
 # Tournesols
 
-Les tournesols captent l'énergie du soleil. Vous pouvez récolter cette énergie.
+Les [tournesols](objects/sunflower) collectent la puissance du soleil. Tu peux récolter cette puissance.
 
-Planter des tournesols fonctionne exactement de la même manière que planter des carottes, sauf que vous devez acheter des graines de tournesol au lieu de graines de carotte.
+La plantation fonctionne exactement comme pour les carottes ou les citrouilles.
 
-Cependant, lorsque vous récoltez un tournesol, l'énergie de tous les tournesols de la ferme se concentre dans la plante récoltée. Ainsi, récolter un tournesol produit une énergie égale à la racine carrée du nombre de tournesols sur la ferme.
+Récolter un tournesol mature produit de l'énergie.
+S'il y a au moins 10 tournesols dans la ferme et que tu récoltes celui qui a le plus grand nombre de pétales, tu obtiens 5 fois plus d'énergie !
 
-Seul un des tournesols ayant le plus de pétales peut gérer cela. Si vous récoltez un tournesol qui n'a pas le plus de pétales parmi tous les tournesols de la ferme, l'énergie détruira tous les tournesols de la ferme.
+`measure()` renvoie le nombre de pétales du tournesol sous le drone.
+Les tournesols ont au minimum `7` et au maximum `15` pétales.
+Ils peuvent être mesurés avant même d'être complètement développés.
 
-`measure()` retourne le nombre de pétales du tournesol sous le drone. Les tournesols ont au moins `7` et au plus `15` pétales. Ils peuvent être mesurés avant d'être complètement développés.
+Plusieurs tournesols peuvent avoir le même nombre de pétales, il peut donc y avoir plusieurs tournesols avec le plus grand nombre de pétales. Dans ce cas, peu importe lequel tu récoltes.
 
-Plusieurs tournesols peuvent avoir le même nombre de pétales, donc il peut également y avoir plusieurs tournesols avec le plus grand nombre de pétales. Dans ce cas, peu importe lequel vous récoltez.
+Tant que tu as de l'énergie, le drone fonctionnera deux fois plus vite.
+Il consomme 1 point d'énergie toutes les 30 actions (comme les déplacements, les récoltes, les plantations...)
+L'exécution d'autres instructions de code peut aussi utiliser de l'énergie, mais beaucoup moins que les actions du drone.
 
-Tant que vous avez de l'énergie, le drone l'utilisera pour fonctionner deux fois plus vite. Il consomme 1 énergie toutes les 30 actions (comme les déplacements, les récoltes, les plantations...)
+En général, tout ce qui est accéléré par les améliorations de vitesse est également accéléré par l'énergie.
+Tout ce qui est accéléré par l'énergie utilise aussi de l'énergie proportionnellement au temps d'exécution, indépendamment des améliorations de vitesse.
 
-Exécuter d'autres instructions de code peut également utiliser de l'énergie, mais beaucoup moins que les actions du drone.
-
-En général, tout ce qui est accéléré par les améliorations de vitesse est également accéléré par l'énergie. Tout ce qui est accéléré par l'énergie utilise également de l'énergie proportionnelle au temps nécessaire pour l'exécuter, en ignorant les améliorations de vitesse.

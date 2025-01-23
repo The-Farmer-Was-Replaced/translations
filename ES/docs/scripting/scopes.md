@@ -1,31 +1,57 @@
-# Name Scopes
-Los alcances determinan qué variables se pueden acceder desde dónde. Un alcance es básicamente una asignación de nombres a valores.
-Funcionan casi igual que en Python, pero no siempre, así que asegúrate de leer esta sección cuidadosamente.
+# Ámbitos de Nombres
+Los ámbitos determinan qué variables pueden ser accesibles desde dónde. Un ámbito es básicamente un mapeo de nombres a valores.
+Funcionan básicamente igual que en Python.
 
-Al igual que en Python, hay un alcance global, y cada función tiene un alcance local.
-Cuando defines una variable, se agrega al alcance actual.
-Cualquier cosa fuera de una definición de función se considera parte del alcance global.
+Hay un ámbito global y cada función tiene un ámbito local.
+Cuando defines una variable, se añade al ámbito actual.
+Cualquier cosa fuera de una definición de función se considera parte del ámbito global.
 
 `x = 1`
-Asigna un valor de `1` al nombre `x` en el alcance global.
+Asigna un valor de `1` al nombre `x` en el ámbito global.
 
-Esta declaración `def` asigna una función al nombre `f` en el alcance global.
+Esta declaración `def` asigna una función al nombre `f` en el ámbito global.
 `def f():
-    `Asigna un valor de `1` al nombre `y` en el alcance local de `f`.`
+    `Asigna un valor de `1` al nombre `y` en el ámbito local de `f`.`
     y = 1
 
-    `Asigna una función al nombre `g` en el alcance local de `f`.`
+    `Asigna una función al nombre `g` en el ámbito local de `f`.`
     def g():
         pass`
 
 `f()`
-Recupera la función almacenada en `f` del alcance global y la llama.
+Recupera la función almacenada en `f` del ámbito global y la llama.
 
 `print(y)`
-Esta declaración print en el alcance global lanza un error porque `y` nunca fue declarada en el alcance global, por lo que no podemos leerla aquí.
-Solo existió en el alcance local de `f`.
+Esta declaración print en el ámbito global lanza un error porque `y` nunca fue declarada en el ámbito global, por lo que no podemos leerla aquí.
+Solo existía en el ámbito local de `f`.
 
-Los bucles y las ramas no crean sus propios alcances, por lo que cualquier cosa declarada dentro de ellos aún se puede usar fuera.
+## La palabra clave global
+Por defecto, todas las variables en funciones se vinculan al ámbito local, incluso si existe una variable con el mismo nombre en el ámbito global.
+
+`x == 0
+
+def f():
+    x = 1
+f()
+print(x)`
+
+Este código imprime `0` porque el `x` local dentro de `f` no es la misma variable que el `x` global, por lo que el `x` global permanece sin cambios. Esto es importante porque de lo contrario, una llamada a una función podría sobrescribir accidentalmente una variable global que simplemente tenga el mismo nombre que una variable local de esa función.
+
+Si deseas escribir en una variable global, debes hacerlo explícitamente usando la palabra clave `global`.
+
+`x == 0
+
+def f():
+    global x
+    x = 1
+f()
+print(x)`
+
+En este ejemplo, `global x` vincula `x` a la variable global `x` definida anteriormente. Esto ahora imprimirá `1`.
+Ten en cuenta que cambiar variables globales suele ser el primer paso hacia el código espagueti, donde cada parte del programa afecta a todas las demás partes del programa, así que no lo uses en exceso.
+
+## Bucles y ramas
+Los bucles y ramas no crean sus propios ámbitos, por lo que cualquier cosa declarada dentro de ellos aún puede ser utilizada afuera.
 
 `for i in range(3):
     pass

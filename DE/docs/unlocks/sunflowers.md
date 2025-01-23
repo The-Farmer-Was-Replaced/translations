@@ -1,22 +1,20 @@
-# Sunflowers
-Sonnenblumen sammeln die Kraft der Sonne. Du kannst diese Kraft ernten.
+# Sonnenblumen
+[Sonnenblumen](objects/sunflower) sammeln die Kraft der Sonne. Diese Kraft kannst du ernten.
 
-Das Pflanzen funktioniert genauso wie das Pflanzen von Karotten, außer dass du Sonnenblumensamen anstelle von Karottensamen kaufen musst.
+Das Pflanzen funktioniert genauso wie bei Karotten oder Kürbissen.
 
-Wenn du jedoch eine Sonnenblume erntest, fließt die Kraft aller Sonnenblumen auf dem Bauernhof in die geerntete Pflanze.
-Das Ernten einer Sonnenblume ergibt somit eine Kraft, die der Quadratwurzel der Anzahl der Sonnenblumen auf dem Bauernhof entspricht.
-Nur eine der Sonnenblumen mit den meisten Blütenblättern kann dies bewältigen.
-Wenn du eine Sonnenblume erntest, die nicht die meisten Blütenblätter aller Sonnenblumen auf dem Bauernhof hat, wird die Kraft alle Sonnenblumen auf dem Bauernhof zerstören.
+Das Ernten einer ausgewachsenen Sonnenblume liefert Energie.
+Wenn mindestens 10 Sonnenblumen auf der Farm stehen und du die mit der größten Anzahl an Blütenblättern erntest, erhältst du 5-mal mehr Energie!
 
 `measure()` gibt die Anzahl der Blütenblätter der Sonnenblume unter der Drohne zurück.
 Sonnenblumen haben mindestens `7` und höchstens `15` Blütenblätter.
-Sie können gemessen werden, bevor sie vollständig gewachsen sind.
+Sie können bereits vor dem vollständigen Wachstum gemessen werden.
 
-Mehrere Sonnenblumen können die gleiche Anzahl von Blütenblättern haben, sodass es auch mehrere Sonnenblumen mit der größten Anzahl von Blütenblättern geben kann. In diesem Fall ist es egal, welche von ihnen du erntest.
+Mehrere Sonnenblumen können die gleiche Anzahl an Blütenblättern haben, sodass es auch mehrere Sonnenblumen mit der größten Anzahl an Blütenblättern geben kann. In diesem Fall spielt es keine Rolle, welche davon du erntest.
 
-Solange du Kraft hast, wird die Drohne sie nutzen, um doppelt so schnell zu arbeiten.
-Sie verbraucht 1 Kraft alle 30 Aktionen (wie Bewegungen, Ernten, Pflanzen...).
-Das Ausführen anderer Code-Anweisungen kann auch Kraft verbrauchen, aber viel weniger als Drohnenaktionen.
+Solange du Energie hast, läuft die Drohne doppelt so schnell.
+Sie verbraucht alle 30 Aktionen (wie Bewegungen, Ernten, Pflanzen...) 1 Energie.
+Die Ausführung anderer Codeanweisungen kann auch Energie verbrauchen, aber deutlich weniger als Drohnenaktionen.
 
-Im Allgemeinen wird alles, was durch Geschwindigkeits-Upgrades beschleunigt wird, auch durch Kraft beschleunigt.
-Alles, was durch Kraft beschleunigt wird, verbraucht auch Kraft proportional zur Zeit, die es zur Ausführung benötigt, wobei Geschwindigkeits-Upgrades ignoriert werden.
+Grundsätzlich wird alles, was durch Geschwindigkeits-Upgrades beschleunigt wird, auch durch Energie beschleunigt.
+Alles, was durch Energie beschleunigt wird, verbraucht auch Energie proportional zur Ausführungszeit, unabhängig von Geschwindigkeits-Upgrades.

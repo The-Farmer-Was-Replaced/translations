@@ -1,4 +1,5 @@
-# Stats
-Durante los últimos 60s has cultivado: {{itemblock stats_sum}}
+# Estadísticas
+
+En los últimos 60 segundos has cultivado: {{itemblock stats_sum}}
 
 Tu mejor marca personal por recurso es: {{itemblock stats_best}}

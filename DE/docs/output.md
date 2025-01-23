@@ -1,3 +1,3 @@
-For the full output see [output.txt](persistent_data_path/output.txt).
-Ausgabe gekürzt:
+Für die vollständige Ausgabe siehe [output.txt](persistent_data_path/output.txt).
+Abgeschnittene Ausgabe:
 {{output}}

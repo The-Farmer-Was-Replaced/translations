@@ -1,10 +1,12 @@
-# Expand 1
-Dein Bauernhof ist gewachsen! Dieser Raum ist nicht sehr nützlich, wenn du die Drohne nicht bewegen kannst, daher gibt es eine neue Funktion `move()`, die die Drohne bewegt. `move()` erfordert, dass du die Richtung angibst, in die du die Drohne bewegen möchtest. Es gibt vier neue Konstanten dafür: `North, East, South, West`.
+# Erweitern 1
+<unlock=for>Siehe auch [Expand_2](docs/unlocks/expand_2.md)
 
-Zum Beispiel wird `move(North)` die Drohne ein Feld nach Norden bewegen.
+</unlock>Dein Bauernhof ist gewachsen! Dieser Platz nützt nicht viel, wenn du die Drohne nicht bewegen kannst, daher gibt es eine neue Funktion `move()`, die die Drohne bewegt. `move()` erfordert, dass du die Richtung angibst, in die sich die Drohne bewegen soll. Es gibt vier neue Konstanten dafür: `North, East, South, West`.
 
-Wenn du über den Rand des Bauernhofs hinausgehst, wird die Drohne auf die andere Seite des Bauernhofs bewegt.
-Der folgende Beispielcode wird die Drohne immer weiter nach Norden bewegen und zurück zum Anfang springen, wenn sie den Rand des Bauernhofs erreicht:
+Beispielsweise bewegt `move(North)` die Drohne ein Feld nach Norden.
+
+Wenn du über den Rand der Farm hinausfliegst, wird die Drohne wieder auf der anderen Seite platziert.
+Der folgende Beispielcode bewegt sich unendlich nach Norden und springt zum Anfang zurück, wenn er den Rand erreicht:
 
 `while True:
 	move(North)`

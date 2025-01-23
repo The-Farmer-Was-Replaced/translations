@@ -1,58 +1,70 @@
-# Mazes
-If you use fertilizer on a full-grown bush, it will grow into a maze of hedges with a 10% probability. For some reason the drone can't fly over the hedges, even though they don't look that high.
+# Irrgärten
+`Items.Weird_Substance`, das durch [fertilizing](docs/unlocks/fertilizer.md) Pflanzen erhalten wird, hat eine seltsame Wirkung auf Büsche. Wenn sich die Drohne über einem Busch befindet und du `use_item(Items.Weird_Substance, amount)` aufrufst, verwandelt sich der Busch in ein Heckenlabyrinth.
+Die Größe des Irrgartens hängt von der Menge an `Items.Weird_Substance` ab (das zweite Argument des Aufrufs von `use_item()`).
+Ohne Irrgarten-Upgrades führt das Verwenden von `n` `Items.Weird_Substance` zu einem `n`x`n`-Labyrinth. Für jede Irrgarten-Upgrade-Stufe benötigst du zusätzlich `n` `Items.Weird_Substance`, um die gleiche Wirkung zu erzielen.
+Um ein vollflächiges Labyrinth zu bauen:
 
-There is a treasure hidden somewhere in the hedge. Use `harvest()` on the treasure to receive gold equal to the area of the maze. (For example, a 5x5 maze will yield 25 gold.)
+`plant(Entities.Bush)
+n_substance = get_world_size() * num_unlocked(Unlocks.Mazes)
+use_item(Items.Weird_Substance, n_substance)`
 
-If you use `harvest()` anywhere else the maze will simply disappear.
+Aus irgendeinem Grund kann die Drohne nicht über die Hecken fliegen, obwohl sie nicht sehr hoch aussehen.
 
-`get_entity_type()` is equal to `Entities.Treasure` if the drone is over the treasure and `Entities.Hedge` everywhere else in the maze.
+Irgendwo im Labyrinth befindet sich ein Schatz. Verwende `harvest()` auf den Schatz, um Gold in Höhe der Labyrinthfläche zu erhalten. (Zum Beispiel bringt ein 5x5-Labyrinth 25 Gold.)
 
-Mazes do not contain any loops unless you reuse the maze (see below how to reuse a maze). So there is no way for the drone to end up in the same position again without going back.
+Bei Verwendung von `harvest()` an anderer Stelle verschwindet das Labyrinth einfach.
 
-You can check if there is a wall by trying to move through it. 
-`move()` returns `True` if it succeeded and `False` otherwise.
+`get_entity_type()` ist gleich `Entities.Treasure`, wenn die Drohne sich über dem Schatz befindet, und `Entities.Hedge` überall sonst im Labyrinth.
 
-If you have no idea how to get to the treasure, take a look at Hint 1. It shows you how to approach a problem like this.
+Irrgärten enthalten keine Schleifen, es sei denn du verwendest den Irrgarten erneut (siehe unten, wie man ein Labyrinth wiederverwendet). Es gibt also keinen Weg, an denselben Ort zurückzugelangen, ohne umzukehren.
 
+Du kannst überprüfen, ob eine Wand vorhanden ist, indem du versuchst, sie zu durchqueren.
+`move()` gibt `True` zurück, wenn es erfolgreich war, und `False` andernfalls.
 
-For an extra challenge you can also reuse the maze by using fertilizer on the treasure. 
-This has a 10% probability of increasing the treasure by one full maze and moving it to a random position in the maze.
-Using `measure()` on a treasure returns the position it will go to next as a tuple `(x_position, y_position)`.
+Wenn du keine Ahnung hast, wie du den Schatz erreichen sollst, wirf einen Blick auf Hinweis 1. Er zeigt dir, wie man ein solches Problem angehen kann.
 
-For example, while above the treasure, the following code gives you the position where the treasure will be after you fertilize it:
+Für eine zusätzliche Herausforderung kannst du den Irrgarten wiederverwenden, indem du erneut die gleiche Menge `Items.Weird_Substance` auf den Schatz anwendest.
+Dadurch erhöht sich die Goldmenge im Schatz um ein vollständiges Labyrinth und er wird an eine zufällige Stelle im Labyrinth versetzt.
+
+Wenn du `measure()` auf einen Schatz verwendest, erhältst du als Tupel die Position, an die er versetzt wird.
 `next_x, next_y = measure()`
 
-Each time the treasure is relocated a random wall may be removed from the maze. So reused mazes can contain loops.
+Jedes Mal, wenn der Schatz versetzt wird, kann eine zufällige Wand aus dem Irrgarten entfernt werden. So können beim erneuten Verwenden Schleifen entstehen.
 
-Note that loops in the maze make it much more difficult so if you are a beginner you may not want to reuse mazes. Reusing mazes doesn't give you more gold than spawning a new maze. It's only worth it if the extra information and the shortcuts help you solve the maze faster.
+Beachte, dass Schleifen im Labyrinth das Ganze erheblich erschweren, da du dann ohne Umkehr wieder an denselben Ort gelangen kannst.
+Das Wiederverwenden eines Irrgartens bringt nicht mehr Gold ein, als wenn du ihn einfach aberntest und einen neuen spawnst.
+Es ist zu 100% eine zusätzliche Herausforderung, die du problemlos überspringen kannst.
+Es lohnt sich nur, wenn die zusätzlichen Informationen und Abkürzungen dir helfen, das Labyrinth schneller zu lösen.
 
-The same maze can be solved a maximum of 300 times. This corresponds to 299 relocations. After that, fertilizing the treasure won't have any effect anymore.
+Dasselbe Labyrinth kann maximal 300 Mal gelöst werden. Das entspricht 299 Versetzungen. Danach hat das Anwenden von weird substance auf den Schatz keine weitere Wirkung.
 
-<spoiler=show hint 1>Here's a general approach to solving the problem:
+<spoiler=show hint 1>Hier ist ein allgemeines Vorgehen zur Lösung des Problems:
 
-Create a maze and imagine that you are the drone.
+Erstelle ein Irrgarten und stelle dir vor, du wärst die Drohne.
 
-Think about how you would try to find the treasure if you were in the maze.
+Überlege, wie du versuchen würdest, den Schatz zu finden, wenn du dich im Irrgarten befindest.
 
-Write down your strategy step by step so that someone else could follow it without thinking.
+Schreibe deine Strategie Schritt für Schritt auf, damit jemand anderes ihr folgen könnte, ohne nachzudenken.
 
-Now try translating your steps into code.
+Versuche nun, diese Schritte in Code umzusetzen.
 </spoiler>
-<spoiler=show hint 2>For mazes without cycles: All the walls are really just one large connected wall. If you follow the wall, it will lead you through the whole maze.</spoiler>
-<spoiler=show hint 3>It may be useful to keep track of the direction the drone is facing so you can make left and right turns. The drone never actually rotates, but you can still keep a "virtual" rotation in code.
-The following index trick could be helpful for this:
+<spoiler=show hint 2>Solange es keine Schleifen gibt: Alle Mauern bilden eigentlich nur eine einzige zusammenhängende Wand. Wenn du der Wand folgst, führt sie dich durch das gesamte Labyrinth.
+Diese Methode benötigt sehr wenig Code und du musst nicht verfolgen, wo du schon warst. Ungefähr 10 Codezeilen reichen aus.</spoiler>
+<spoiler=show hint 3>Anstatt absolute Richtungen zu verwenden wie move `East` oder move `West`, kann es sehr nützlich sein, relative Richtungen zu verwenden, z.B. "nach rechts abbiegen" oder "nach links abbiegen". Dazu musst du speichern, in welche Richtung sich die Drohne gerade bewegt. Die Drohne dreht sich zwar nie wirklich, aber du kannst dennoch eine "virtuelle" Drehung im Code beibehalten.
+Folgender Index-Trick ist hilfreich:
 
 `directions = [North, East, South, West]
 index = 0`
 
-`# rotate right`
-`# the % 4 makes it wrap around
+Verwende `% 4`, um eine "Uhrzeigerrotation" zu simulieren, damit es nach `West` wieder bei `North` weitergeht:
+`# turn right
 index = (index + 1) % 4`
 
-`# rotate left
+`# turn left
 index = (index - 1) % 4
 
-move(directions[index])`</spoiler>
-<spoiler=show hint 4>If you can't solve it, you can always make your life easy and do it less efficiently. 
-You don't have to be able to reach the treasure every time, you can always harvest and spawn a new maze.
-There is even a small chance that the treasure will appear right under the drone when you create a maze.</spoiler>
+move(directions[index])`
+</spoiler>
+<spoiler=show hint 4>Wenn du es nicht lösen kannst, kannst du es dir immer leicht machen und die weniger effiziente Methode anwenden.
+Ein `1`x`1`-Labyrinth zu lösen ist trivial.
+</spoiler>

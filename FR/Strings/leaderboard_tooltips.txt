@@ -1,0 +1,11 @@
+
+@lb_descr_fastest_reset = Automatisez entièrement le jeu.
+@lb_descr_maze = Cultiver 300000 or.
+@lb_descr_dinosaur = Cultiver 98010 os.
+@lb_descr_cactus = Cultiver 100000 cactus.
+@lb_descr_sunflowers = Cultiver 100000 énergie.
+@lb_descr_pumpkins = Cultiver 100000 citrouilles.
+@lb_descr_hay = Cultiver 100000 foin.
+@lb_descr_wood = Cultiver 100000 bois.
+@lb_descr_carrots = Cultiver 100000 carottes.
+@lb_descr_polyculture = Cultiver 100000 foin, bois et carottes.

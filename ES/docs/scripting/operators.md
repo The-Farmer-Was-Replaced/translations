@@ -1,17 +1,17 @@
-# Operators
+# Operadores
 operadores aritméticos: `+, -, *, /, //, %, **`
 operadores de comparación: `==, !=, <=, >=, <, >`
 operadores booleanos: `not, and, or`
 
-Nota: Todos los números en el juego son números de punto flotante. Por lo tanto, todos los operadores aritméticos son operadores de punto flotante.
+Nota: Todos los números en el juego son números de punto flotante. Así que todos los operadores aritméticos son operadores de punto flotante.
 `//` está definido para simplemente redondear hacia abajo el número después de la división.
 
-Para los operadores de asignación necesitas desbloquear el "Desbloqueo de Variables".
+Para operadores de asignación necesitas desbloquear el "Variable" desbloqueo.
 
 ## Introducción
 Los operadores te permiten comparar, modificar y combinar valores.
-Los operadores aritméticos `+, -, *, /, //, %, **` se utilizan para realizar operaciones matemáticas comunes en números.
-Los operadores de comparación `==, !=, <=, >=, <, >` se utilizan para comparar valores. El resultado siempre es `True` o `False`.
+Los operadores aritméticos `+, -, *, /, //, %, **` se utilizan para realizar operaciones matemáticas comunes sobre números.
+Los operadores de comparación `==, !=, <=, >=, <, >` se utilizan para comparar valores. El resultado es siempre `True` o `False`.
 Los operadores lógicos (también llamados operadores booleanos) `not, and, or` se utilizan para combinar valores de verdad.
 
 ## Operadores Aritméticos
@@ -25,11 +25,11 @@ Los operadores lógicos (también llamados operadores booleanos) `not, and, or` 
 `2 * 3` evalúa a `6`
 `5 / 2` evalúa a `2.5`
 
-`//` hace lo mismo que `/` pero el resultado se redondea hacia abajo (al siguiente número entero).
+`//` hace lo mismo que `/` pero el resultado se redondea hacia abajo (al siguiente entero).
 
 `5 // 2` evalúa a `2`
 
-`%` es el operador de módulo, también conocido como el operador de resto. Esencialmente divide los dos números y luego devuelve el resto. También puedes pensar en él como restar repetidamente el número derecho del número izquierdo hasta que el resto sea menor que el número derecho.
+`%` es el operador módulo, también conocido como operador de residuo. Esencialmente divide los dos números y luego devuelve el residuo. También puedes pensar en ello como restar repetidamente el número derecho del número izquierdo hasta que el residuo sea menor que el número derecho.
 
 `4 % 2` evalúa a `0`
 `5 % 2` evalúa a `1`
@@ -43,20 +43,22 @@ Los operadores lógicos (también llamados operadores booleanos) `not, and, or` 
 `(-5)**3` evalúa a `-125`
 
 ## Operadores de Comparación
-`==` y `!=` se utilizan para verificar si dos valores son "iguales"(`==`) o "no iguales"(`!=`). Pueden ser utilizados en todos los tipos de valores.
+`==` y `!=` se utilizan para verificar si dos valores son "iguales" (`==`) o "no iguales" (`!=`).
+Pueden usarse en todo tipo de valores.
 
 `2 == 2` evalúa a `True`
 `Entities.Bush != Entities.Bush` evalúa a `False`
 `3 != 3 + 1` evalúa a `True`
 
-`<=, >=, <, >` solo pueden ser utilizados en números. Verifican si el número de la izquierda es "menor o igual"(`<=`), "mayor o igual"(`>=`), "menor" (`<`) o "mayor" (`>`) que el número de la derecha.
+`<=, >=, <, >` solo pueden usarse en números.
+Verifican si el número de la izquierda es "menor o igual" (`<=`), "mayor o igual" (`>=`), "menor" (`<`) o "mayor" (`>`) que el número de la derecha.
 
 `1 <= 1` evalúa a `True`
 `2 >= 3` evalúa a `False`
 `-2 < -1` evalúa a `True`
 `6 > 6` evalúa a `False`
 
-## Operadores Lógicos
+## Operadores Booleanos
 `not` simplemente invierte el valor:
 
 `not False` evalúa a `True`

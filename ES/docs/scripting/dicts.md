@@ -1,41 +1,41 @@
-# Dictionaries
+# Diccionarios
 Los diccionarios son una estructura de datos que te permite mapear claves a valores de la misma manera que un diccionario real mapea palabras a sus definiciones y puedes buscarlas muy rápidamente.
 
-Un diccionario puede ser creado así:
-`rotacion = {North:East, East:South, South:West, West:North}`
+Un diccionario se puede crear así:
+`rotation = {North:East, East:South, South:West, West:North}`
 
-La expresión antes de los dos puntos es la clave y la expresión después de los dos puntos es el valor al que la clave mapea.
+La expresión antes de los dos puntos es la clave y la expresión después de los dos puntos es el valor al que se mapea la clave.
 El diccionario anterior mapea direcciones a la dirección a su derecha.
 
 Aquí hay otro que mapea la posición del dron a la entidad sobre la que está.
 `x, y = get_pos_x(), get_pos_y()
-diccionario_entidades = {(x,y):get_entity_type()}`
+entity_dict = {(x,y):get_entity_type()}`
 
 Acceder al valor mapeado a una clave es similar a acceder a un elemento en una lista:
-`valor = diccionario[clave]`
+`value = dict[key]`
 
 Ejemplo:
-`orientacion = rotacion[South]`
-Esto establece `orientacion` a `West`.
+`orientation = rotation[South]`
+Esto asigna `orientation` a `West`.
 
 Puedes agregar un nuevo par clave-valor a un diccionario así:
-`diccionario[clave] = valor`
+`dict[key] = value`
 
 Ejemplo:
-`diccionario_entidades[(get_pos_x(), get_pos_y())] = get_entity_type()`
+`entity_dict[(get_pos_x(), get_pos_y())] = get_entity_type()`
 Esto actualiza la entidad almacenada para la posición actual.
 
 Las claves son únicas, por lo que agregar una clave que ya existe en el diccionario sobrescribirá el valor anterior.
 
-Usa `diccionario.pop(clave)` para eliminar un par clave-valor de `diccionario`.
+Usa `dict.pop(key)` para eliminar un par clave-valor de `dict`.
 
-`clave in diccionario` evalúa a `True` si `clave` es una clave en el `diccionario` y `False` en caso contrario.
-Así que puedes usar `if clave in diccionario:` para verificar si `diccionario` contiene la clave.
+`key in dict` evalúa a `True` si `key` es una clave en `dict` y `False` de lo contrario.
+Así puedes usar `if key in dict:` para comprobar si `dict` contiene la clave.
 
-Poner un diccionario en un bucle for te permite iterar a través de todas las claves:
-`for clave in diccionario:
-	valor = diccionario[clave]`
+Insertar un diccionario en un bucle for te permite iterar a través de todas las claves:
+`for key in dict:
+	value = dict[key]`
 
-No hay garantías sobre el orden en el que se iteran las claves.
+No hay garantías sobre el orden en que se iteran las claves.
 
-Ver también [Conjuntos](docs/scripting/sets)
+Vea también [Sets](docs/scripting/sets.md)
